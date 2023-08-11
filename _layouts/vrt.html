@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <script src= "/assets/JS/angular-sanitize.js"></script>
+  <script src = "/assets/JS/FileSaver.min.js"> </script>
+  
+  {% include head.html %}
+
+  <body ng-app="acrt" ng-controller="acrtFormCtrl" >
+    {% include header.html %}
+
+    <main style="margin-left: 1em;">
+      {{ content }}
+    </main>
+
+    <div id="htmlReportDiv" class="footerbutton" style="margin-left: 1em;"  hidden >
+       Select <strong>Save as HTML</strong> to generate  HTML version of the printable report (saved in Downloads folder by default).<br/>
+       <input type="button" id="sbtBtn" class="button" value="Save as HTML (Alt+S)" ng-click="saveHtml()"> <br/>
+    </div>
+
+    <script src="/assets/JS/acrt_Web_Report.js"> </script>
+    <script>
+      function myFunction() {
+        window.print();
+      }
+    </script>
+
+  </body>
+</html>
