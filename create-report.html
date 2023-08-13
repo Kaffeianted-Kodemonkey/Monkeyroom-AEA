@@ -39,7 +39,7 @@
       </div>
     </nav>
 
-    <div class="container-fluid m-5">
+    <div class="container m-5">
       <h1>Evaluation</h1>
 
       <form name="acrtInputForm" id="acrtInputFormID">
@@ -66,7 +66,7 @@
           </span>
 
           <main class="mx-5">
-            <form id="webAppIntakeform" name="Intake form to capture test results">
+            <form id="webAppIntakeform" name="Intake form to capture test results" class="mb-5">
               <div id="hdnMsgId">
                 <!-- <p ng-if="edit">
                 <strong  class="hdnMsg">Please edit/update as needed below. </strong>
@@ -791,10 +791,11 @@
               <!-- <div/>	 <div/>
               </br></br> -->
 
-              <div class="footerbutton" ng-if="dataLoaded">
+              <div class="footerbutton mb-5" ng-if="dataLoaded">
                 <span > {{submitMessage}}</span><br/>
-                <input  type="button" id="sbtBtn" class="button" value="Save (Alt+S)" ng-click="submit1()">
+                <input  type="button" id="sbtBtn" class="button mb-5" value="Save (Alt+S)" ng-click="submit1()">
               </div>
+              <br><br><br><br><br>
             </form>
           </main>
 
