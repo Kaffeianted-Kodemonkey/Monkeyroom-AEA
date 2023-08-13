@@ -15,7 +15,7 @@
   left: 0%;
   position: absolute;
   transform: translateY(-100%);
-  color: blue;
+  color: blue ;
   font-size: 0.7em;
 }
 .skip:focus {
@@ -753,7 +753,7 @@ ul {
 		font-family: "Source Sans Pro", "Franklin Gothic Book","system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
 		padding-left:70px;*/
 		list-style-type:  disc;
-		background-color:white;
+		/*background-color:white;*/
 }
 
 li > ul {
