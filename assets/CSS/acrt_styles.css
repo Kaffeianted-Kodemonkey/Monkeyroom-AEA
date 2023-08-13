@@ -12,10 +12,14 @@
 }
 
 .skip {
-  color: white;
+  left: 0%;
+  position: absolute;
+  transform: translateY(-100%);
+  color: blue;
   font-size: 0.7em;
 }
 .skip:focus {
+  transform: translateY(0%);
   color: blue;
 }
 
@@ -23,7 +27,7 @@
   color: blue;
 }
 .skip:visited {
- color: white;
+ color: red;
  }
 
 a.button {
@@ -207,10 +211,11 @@ a:active {
    color: rgb(5, 41, 59);
 font-family: "Source Sans Pro", "Franklin Gothic Book","system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
 }
-a:visited  {
+
+/*a:visited  {
    color: rgb(0, 102, 153);
-font-family: "Source Sans Pro", "Franklin Gothic Book", "system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
-}
+   font-family: "Source Sans Pro", "Franklin Gothic Book", "system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
+}*/
 
 .collapsible:active {
  background-color: rgb(5, 41, 59);
@@ -407,12 +412,12 @@ fieldset
    left: 0em;
    right: 0em;
    bottom: 0em;
-   color: white;
+   color: gray;
    width: 100%;
    overflow: hidden;
    background-color:rgb(0, 51, 102);
    font-family: "Source Sans Pro", "Franklin Gothic Book","system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
-   text-align: left;
+   text-align: center;
    padding: 0.5em;
 }
 
@@ -794,6 +799,7 @@ body {
 	/*border: 1px solid #A9A9A9; */
 	border: none;
 	font-family: "Source Sans Pro", "Franklin Gothic Book","system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
+  overflow-x: hidden;
 }
 
 
