@@ -823,8 +823,8 @@ $scope.saveHtml = function() {
 
   "</head>" +
 
-  "<div><!-- <img src=\" /home/kodemonkey/Pictures/KaffeinatedKodemonkey-new-logo.png \" alt=\"Kaffeinated Kodemonkey logo\" title=\"Kaffeinated Kodemonkey Logo\"style=\"width:25%;\">-->" +
-  "<h2>Kaffeinated Kodemonkey <br> A11y Evaluation Audit (AEA) Report</h2> </br>"+
+  "<div><img src=\" Logo.jpg\" alt=\"Kaffeinated Kodemonkey logo\" title=\"PRoject Logo\"style=\"width:15%;\">" +
+  "<p class=\"fs-5\"><strong>Kaffeinated Kodemonkey | <em>AEA</em> Report</strong></p> </br>"+
 
   "<button id=\"printPageButton\" style=\"background-color:rgb(0, 51, 102); color: white; padding-left: 0em; text-align: center; width: 15%;font-size: 100%;border: 2px solid black;border-radius: 5px;\" onclick=\"myPrint()\">Print this page</button> <br>" +
 
@@ -869,7 +869,7 @@ $scope.saveHtml = function() {
 
   "<h2> Web Content Accessibility Guidelines (WCAG) Report </h2>" + WCAG + "<br>" +
 
-  "<div class=\"pagebreak\"> </div>"+
+  "<!--<div class=\"pagebreak\"> </div>-->"+
 
   "<h2> Test Results </h2>" + testResult + "<br>" +
   "<h2> Disability Impact Score </h2>" +$scope.impctInfoMsg+"<br><br> <strong>Risk Score: "+$scope.TotalImpactedGroupNo+"</strong><br>"+ RSCSCORE + "<br><br>" +

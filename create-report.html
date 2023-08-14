@@ -17,30 +17,37 @@
     <script src = "assets/JS/FileSaver.min.js"> </script>
   </head>
 
-  <body ng-app="acrtWebIntake"  id="acrtBody" class="d-flex flex-column h-100">
+  <body class="d-flex flex-column h-100">
     <a class="visually-hidden-focusable" href="#content">Skip to main content</a>
 
     <nav class="navbar navbar-expand-sm navbar-dark bg-ink">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"><img src="/assets/img/KKM-Logo.png" alt="KKM Logo" width="50" class="d-inline-block align-text-middle pe-3">Monkeyroom ~ <em>AEA</em></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="/Instruction.html">Evaluation</a>
+            <a class="nav-link" href="/Instruction.html">Evaluation</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/LICENSE.html">View License</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="/LICENSE.html">View License</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div class="container m-5">
+    <div class="container m-5" ng-app="acrtWebIntake"  id="acrtBody" >
       <h1>Evaluation</h1>
+
+      <ol>
+        <li>Use 'Skip to main content' link or keyboard shortcut Alt+M to go to main content.</li>
+        <li>To Create a new Report, Load <strong>new-project.json</strong>.</li>
+        <li>To edit, select the project JSON file you are working on. </li>
+        <li>Expand Product, Test Environment, and Tester Sections to enter information.</li>
+        <li>Complete all required form fields marked with an asterisk ( &nbsp;&nbsp;<span class="required"></span>) </span> in Product and Testing information sections.</li>
+        <!--<li>You can customize JSON Success Criteria templates with pre-populated information (e.g., Product Section) for future use.</li>-->
+        <li> If needed, open a copy of the <a href= "/assets/Resources/TT-Process.pdf" target="_blank" id="li-link" style="display:inline-block; color:blue;"><u>Trusted Tester Test Process</u>.</a> </li>
+        <li>Mentees shouls alway reach out to their Mentor if they have any questions.</li>
+      </ol>
 
       <form name="acrtInputForm" id="acrtInputFormID">
         <div ng-controller="acrtWebIntakeCtrl">
