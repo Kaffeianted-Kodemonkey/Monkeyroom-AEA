@@ -823,8 +823,8 @@ $scope.saveHtml = function() {
 
   "</head>" +
 
-  "<div><img src=\" Logo.jpg\" alt=\"Kaffeinated Kodemonkey logo\" title=\"PRoject Logo\"style=\"width:15%;\">" +
-  "<p class=\"fs-5\"><strong>Kaffeinated Kodemonkey | <em>AEA</em> Report</strong></p> </br>"+
+  "<div><img src=\" Logo.jpg\" alt=\"Kaffeinated Kodemonkey logo\" title=\"PRoject Logo\" style=\"width:18%; margin-top: 20px;\">" +
+  "<!-- <strong> | <em>AEA</em> Report</strong> --></br>"+
 
   "<button id=\"printPageButton\" style=\"background-color:rgb(0, 51, 102); color: white; padding-left: 0em; text-align: center; width: 15%;font-size: 100%;border: 2px solid black;border-radius: 5px;\" onclick=\"myPrint()\">Print this page</button> <br>" +
 
