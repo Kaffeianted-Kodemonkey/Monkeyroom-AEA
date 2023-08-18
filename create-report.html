@@ -35,25 +35,33 @@
       </div>
     </nav>
 
-    <div class="container m-5" ng-app="acrtWebIntake"  id="acrtBody" >
+    <div class="container ms-5 mt-3" ng-app="acrtWebIntake"  id="acrtBody" >
       <h1>Evaluation</h1>
 
       <ol>
-        <li>Use 'Skip to main content' link or keyboard shortcut Alt+M to go to main content.</li>
-        <li>To Create a new Report, Load <strong>new-project.json</strong>.</li>
-        <li>To edit, select the project JSON file you are working on. </li>
-        <li>Expand Product, Test Environment, and Tester Sections to enter information.</li>
-        <li>Complete all required form fields marked with an asterisk ( &nbsp;&nbsp;<span class="required"></span>) </span> in Product and Testing information sections.</li>
-        <!--<li>You can customize JSON Success Criteria templates with pre-populated information (e.g., Product Section) for future use.</li>-->
-        <li> If needed, open a copy of the <a href= "/assets/Resources/A11y-Evaluation-Process-v1.pdf" target="_blank" id="li-link" style="display:inline-block; color:blue;"><u>A11y Evaluation Process</u>.</a> </li>
+        <li>Open the <a href= "/assets/Resources/A11y-Evaluation-Audit-Process-v1.pdf" target="_blank" id="li-link">  A11y Evaluation Audit Process</a></li>
+        <li>To Create a new Report:
+          <ul>
+            <li>Download and save <a href="/assets/Resources/new-project.json" download><strong>new-project.json</strong></a></li>
+            <li>Upload the file below</li>
+          </ul>
+        </li>
+        <li>To edit current project:
+          <ul>
+            <li>Select the project's JSON file you are working on</li>
+            <li>Upload the file below</li>
+          </ul>
+        </li>
+
         <li>Mentees shouls alway reach out to their Mentor if they have any questions.</li>
+        <li>Save report JSON file to your local drive</li>
       </ol>
 
       <form name="acrtInputForm" id="acrtInputFormID">
         <div ng-controller="acrtWebIntakeCtrl">
           <div class="col-4" id='selectFileHd' ng-hide = "fileInput1" >
-            <label for="fileinput" class="form-label"><strong> Select template or test results JSON file </strong></label> <br>
-            <input type="file" class="form-control form-control-sm" id="fileinput" name="Browse Input File"  title="Please select valid file" ng-model='selectedFile' onchange="angular.element(this).scope().fileNameChanged(this)" accept=".json"> <br>  <!--ng-click ="fileInput();"-->
+            <label for="fileinput" class="form-label"><strong> Select new-project.json or current project JSON file </strong></label> <br>
+            <input type="file" class="form-control form-control-sm" id="fileinput" name="Browse Input File" title="Please select valid file" ng-model='selectedFile' onchange="angular.element(this).scope().fileNameChanged(this)" accept=".json"> <br>  <!--ng-click ="fileInput();"-->
           </div>
 
           <br>
@@ -64,15 +72,15 @@
           <span id="hideLoad">
             <label for="loadFile" class="form-label" ng-show="fileInput1" ><strong> Load file</strong></label><br>
 
-            <button ng-show="fileInput1" id='button' class="btn btn-primary mb-3" ng-model="loadbtn" ng-click="loadFile();" id='loadFile' name="Load Data In this Form" ng-model-options="{  updateOn: 'click',  debounce: { 'default': 20, 'blur': 0 }}">Load File </button> </span>
+            <button ng-show="fileInput1" id='button' class="btn btn-md btn-primary mb-3" ng-model="loadbtn" ng-click="loadFile();" id='loadFile' name="Load Data In this Form" ng-model-options="{  updateOn: 'click',  debounce: { 'default': 20, 'blur': 0 }}">Load File </button> </span>
 
             <p>
               <img  ng-show="fileInput1"  id="dwnldConfm"  ng-src ="/assets/Resources/chkMrk.jpg"  ng-if="dataLoaded" width="20" height="20"  alt="checkmark" onerror="this.style.display='none';">
-            <span  id="msg"><strong > </strong></span>
+              <span  id="msg"><strong > </strong></span>
             </p>
           </span>
 
-          <main class="mx-5">
+          <main>
             <form id="webAppIntakeform" name="Intake form to capture test results" class="mb-5">
               <div id="hdnMsgId">
                 <!-- <p ng-if="edit">
@@ -349,14 +357,21 @@
                 </select> &nbsp; &nbsp;   </div> -->
 
                 <h2> Test Results Form </h2>
+                <div class="row ms-1">
+                  <div class="col-8 ">
+                    <input class="mt-1" type="checkbox" id="alerts" title="Disable Add Child Issue/Remove Child Issue Alerts within the Test Results form." ng-model="checkboxModel.alerts"  ng-init="checkboxModel.alerts='on'"   ng-true-value="'off'" ng-false-value="'on'">
+                    &nbsp;
+                    <label for="alerts" name="chkUnchk" id="chkUnchk"> <strong>Disable</strong> Add Child Issue/Remove Child Issue Alerts within the Test Results form. </label>
+                  </div>
+                </div>
 
-                <label for="alerts" name="chkUnchk" id="chkUnchk"><strong>Disable</strong> Add Child Issue/Remove Child Issue Alerts within the Test Results form. </label>
-                <input type="checkbox" id="alerts" title="Disable Add Child Issue/Remove Child Issue Alerts within the Test Results form." ng-model="checkboxModel.alerts"  ng-init="checkboxModel.alerts='on'"   ng-true-value="'off'" ng-false-value="'on'">
-
-                <br><br>
-
-                <input type="checkbox" name="Remediation Details" ng-model="selected_name_rmdtn"   title="Remediation details, Check user manual section 5.1 for details."  id="rmdtlnd" ng-change="remediationDetails()"   ng-true-value="'Yes'" ng-false-value="'No'">
-                <label for="rmdtlnd" ><strong>Show Remediation Detail Columns </strong></label>
+                <div class="row ms-1">
+                  <div class="col-8">
+                    <input class="mt-1" type="checkbox" name="Remediation Details" ng-model="selected_name_rmdtn" title="Remediation details, Check user manual section 5.1 for details."  id="rmdtlnd" ng-change="remediationDetails()"   ng-true-value="'Yes'" ng-false-value="'No'">
+                    &nbsp;
+                    <label for="rmdtlnd" ><strong> Show Remediation Detail Columns </strong></label>
+                  </div>
+                </div>
 
                 <div id="rmdTbleDiv">
                   <table style="height: 1000px;" id="rmdTble" >
@@ -822,7 +837,7 @@
 
     <footer class="footer mt-auto bg-ink text-muted">
       <div class="container text-center pt-4">
-        <p class="ms-3"><strong>Monkeyroom ~ A11y Evaluation Audit</strong> | Designed by Kaffeinated Kodemonkey &copy {{ site.time | date: "%Y" }}</p>
+        <p class="ms-3"><strong>Monkeyroom ~ A11y Evaluation Audit</strong> | Designed by Kaffeinated Kodemonkey &copy <!--{{ site.time | date: "%Y" }} --> 2023</p>
       </div>
     </footer>
 
