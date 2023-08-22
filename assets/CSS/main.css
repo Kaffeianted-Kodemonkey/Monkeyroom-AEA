@@ -3,6 +3,10 @@
   background-color: #003366 !important;
 }
 
+.tbl-noborder{
+  border: 0px !important;
+}
+
 /*.navbar-dark {
     --bs-navbar-color: rgba(255, 255, 255, 0.55);
     --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
