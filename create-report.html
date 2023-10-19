@@ -31,24 +31,58 @@
         <br>
 
         <!-- <h1 style="margin-left: 1em;">A11y Evaluation Audit (<em>AEA</em>)</h1> -->
+        <h2>Welcome the A11y Evaluation Audit Test Process</h2>
 
+        <p>At our organization, beleives stronglly that all prodjucats should meet ADA Compliance to the best of its ablility.</p>
+
+        <p>To achieve this, we follow a comprehensive process that involves the utilization of A11y tools, screen readers, and various assistive technologies.
+        Along with these plugins: <strong>ANDIE</strong>, <strong>WAVE</strong>, <strong>Color Contrast Analyzer</strong>, <strong>Accessibility Insight</strong>.
+        The process is aligned with the Accessibility Evaluation and Audit (AEA) framework, which serves as our guiding principle to guarantee an inclusive
+        user experience.</p>
+
+        <p>As an A11y Developer you will evaluate the product using the trusted tested process along with screenreaders, mobile devices,
+        assistive technologies as needed, WAVE and other plugins. Review the project scope before strating any projects to gather an understanding
+        of level of compliance; WCAG/508, WCAG only, AA or AAA etc.. Also take note if there are any requiered or suggested testing methods that
+        may be unquice for the project.</p>
+        <hr />
         <table>
           <tr>
             <td class="tbl-noborder" width=45%>
-              <h2>Welcome the A11y Evaluation Audit Test Process</h2>
-
-              <p>At our organization, beleives stronglly that all prodjucats should meet ADA Compliance to the best of its ablility.</p>
-
-              <p>To achieve this, we follow a comprehensive process that involves the utilization of A11y tools, screen readers, and various assistive technologies.
-              Along with these plugins: <strong>ANDIE</strong>, <strong>WAVE</strong>, <strong>Color Contrast Analyzer</strong>, <strong>Accessibility Insight</strong>.
-              The process is aligned with the Accessibility Evaluation and Audit (AEA) framework, which serves as our guiding principle to guarantee an inclusive
-              user experience.</p>
-
               <h3><em>AEA</em> Test Process:</h3>
 
               <ol>
-                <li>Access the <strong><a href="/assets/Resources/AEA-Process-Guide.pdf" target="_blank"><em>AEA</em> Test Process</a></strong> and follow </li>
-                <li>Launch the <em>AEA</em> reporting tool to recored test results:</li>
+                <li>Downloand the <a href="/assets/Resources/new-project" style="color: blue;" title="new-project JSON file" Downloand><u>new-project JSON</u></a> file if you are starting a new project</li>
+                <li>Or load the saved JSON file for project</li>
+                <li>Open the <strong><a href="/assets/Resources/AEA-Process-Guide.pdf" style="color: blue;" target="_blank"><u><em>AEA</em> Test Process</u></a></strong> and follow the trusted tester process</li>
+                <li>Launch the <em>AEA</em> reporting tool to recored test results form step 3</li>
+              </ol>
+
+              <p><strong>How to Test Parsing:</strong></p>
+              <p>TTP: Issue 65/WCAG: 4.1.1 - uses the <a href="https://validator.w3.org/nu/" style="color: blue;" target="_blank"><u>Nu HTML Checker</u></a> and supporting bookmarklets:</p>
+              <ol>
+                <li>Open <a href="https://validator.w3.org/nu/about.html" style="color: blue;" target="_blank"><u>About the Nu HTML Checker</u></a> in a new browser window.</li>
+                <li>Add these two bookmarklets to your browser bookmarks:
+                  <ol type="a">
+                    <li>Check serialized DOM of current page</li>
+                    <li>Check for WCAG 2.0 parsing compliance<br/>
+                    <small>(Mouse users can simply drag the corresponding links from the page to the browser bookmarks bar. Keyboard users can follow these instructions.)</small></li>
+                  </ol>
+                </li>
+                <li>Go to the browser tab containing your target page and, in that browser window, select the first bookmarklet. It will send the page's DOM to the checker and show the results in a new browser tab.</li>
+                <li>Go to the browser tab containing the checker results and, in that browser window, select the second bookmarklet. It will filter the results to show only WCAG parsing errors.</li>
+                <li>Examine the filtered results to verify that there are no errors related to:
+                  <ol type="a">
+                    <li>Missing start or end tags</li>
+                    <li>Duplicate attributes</li>
+                    <li>Improper nesting of elements</li>
+                  </ol>
+                </li>
+                <li>Record your results:
+                  <ol type="a">
+                    <li>If you find any failures, select <strong>Fail</strong>, then add them as failure instances.</li>
+                    <li>Otherwise, select <strong>Pass</strong>.</li>
+                  </ol>
+                </li>
               </ol>
 
               <div style="width:100%; margin-left:60px">
