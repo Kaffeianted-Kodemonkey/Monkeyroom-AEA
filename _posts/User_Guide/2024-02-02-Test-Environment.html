@@ -1,0 +1,133 @@
+---
+layout: userguide
+title:  "Testing Environment"
+date: 2024-02-02 07:32:53 -0700
+categories: [User_Guide]
+is_series: true
+series_title: User Guide
+---
+<p>At the initial release of this document, only the operating systems and browsers specified below were validated with the test
+process and tools to ensure that results were consistent and accurate. The list of supported operating systems and browsers is
+expected to grow. Please refer to the DHS Section 508 Compliance Testing Tools website at
+<a href="https://www.dhs.gov/508-tools" target="_blank">DHS 508 Tools</a> for the most up-to-date
+test environment information and the Trusted Tester Test Tool Installation Guide.</p>
+
+<table class="table border">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col" colspan="3" class="text-center">Operating Systems</th>
+    </tr>
+  </thead>
+  <tbody class="">
+    <tr>
+      <td width="25%">
+        <p>Following operating systems<br /> are validated:</p>
+      </td>
+      <td width="25%">
+        <ul>
+          <li>Windows 10 and 11 (desktop mode)</li>
+          <li>macOS (with Safari only)</li>
+        </ul>
+      </td>
+      <td>
+        <p>Although Windows 10 and 11 and macOS are the only operating systems listed, no foreseeable issues due to using another operating
+        system have been identified. The operating system has little to no impact on web testing results and is more dependent on the browser.</p>
+     </td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="table border">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col" colspan="3" width="25%" class="text-center">Browsers</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th width="25%">
+        <p>Windows 10:</p>
+      </th>
+      <td width="25%">
+        <ul>
+          <li>Google Chrome</li>
+          <li>Mozilla Firefox</li>
+          <li>Microsoft Edge</li>
+        </ul>
+      </td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>macOS:</th>
+      <td>
+        <ul>
+          <li>Safari</li>
+        </ul>
+      </td>
+      <td>
+        <p>Use of newer versions of these browsers is acceptable unless otherwise specified on the DHS Section 508 Compliance Testing
+        Tools website at <a href="https://dhs.gov/508-tools" target="_blank">508-Tools</a>. As browsers are frequently updated, it may
+        be possible that an update creates critical issues for test procedures or results. Known issues and modifications will be
+        published on the website as quickly as possible.</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Testing Tools</h2>
+<p>The tools used in the Test Process (and Baseline tests) have been chosen based on several factors including ease of use, ease of teaching, and
+  accuracy of results. They are also free to install and use. The tools assist the tester with verification of accessibility properties. This test
+  process is essentially a code inspection for accessibility properties, but the tools reduce the need for a tester to view source code or have
+  in-depth knowledge of programming languages.</p>
+
+<p>If these tools cannot be used, e.g., due to technical or security limitations, other tools may be substituted if it can be demonstrated that
+they provide equivalent results. Use of alternate tools must be supported by clearly documented test processes and test results showing how the
+alternate tool is equivalent for each test in which it is used in this test process.</p>
+
+<div class="accordion mb-4" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+        <strong>ANDI</strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p><strong>ANDI</strong> (Accessible Name & Description Inspector) is a free open-source bookmarklet, meaning that the tool does not
+        require installation as a plugin and can be added to multiple browsers as a bookmark. <strong>ANDI</strong> is designed to help test
+        web content for accessibility. Developed by the US Social Security Administration, <strong>ANDI</strong> is available at
+        <a href="https://www.ssa.gov/accessibility/andi/help/install.html" target="_blank"><strong>ANDI</strong> Install</a>.</p>
+
+        <p><strong>ANDI</strong> issues may be reported to the <strong>ANDI</strong> GitHub page:
+        <a href="https://github.com/SSAgov/" target="_blank"><strong>ANDI issues</strong></a>.</p>
+
+        <p>If <strong>ANDI</strong> is not working on a specific web page, please refer to Appendix D, <strong>ANDI</strong>: Additional Information
+        for possible solutions.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        <strong>Colour Contrast Analyzer </strong>
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse">
+      <div class="accordion-body">
+        <p>The Colour Contrast Analyzer (CCA) is a free open-source tool that displays the contrast ratio for two selected colors.
+        Developed by Steve Faulkner and the Paciello Group (TPGi), CCA is available at the following links:</p>
+        <ul>
+          <li><a href="https://www.tpgi.com/color-contrast-checker/" target="_blank">TPGi’s CCA download page</a></li>
+          <li><a href="https://github.com/ThePacielloGroup/CCAe/releases" target="_blank">CCA on GitHub</a></li>
+        </ul>
+
+        <p>Microsoft’s Accessibility Insights (MSAI) has been validated as a substitute for CCA for the color contrast test.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex align-items-center">
+  <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/Conformance-Reporting-Requirments.html"
+  class="btn btn-md btn-success">Conformance Reporting Requirments</a></div>
+</div>

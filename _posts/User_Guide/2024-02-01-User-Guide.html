@@ -1,0 +1,47 @@
+---
+layout: userguide
+title:  "User Guide"
+date: 2024-02-01 07:32:53 -0700
+categories: [User_Guide]
+permalink: /user_guide/index.html
+is_series: true
+series_title: User Guide
+---
+<p>At Kaffeinated Kodemonkey, we are committed to ensuring that all our projects meet or exceed accessibility standards.
+To achieve this, we have adopted the <strong>DHS Trusted Tester</strong> process as our primary testing methodology,
+and we base our approach on the User Guide for Accessibility Evaluation Audit (AEA) Reports provided by the <strong>DHS</strong></p>
+
+<p>This process serves as our baseline for ensuring accessibility compliance across all our projects. To conduct a manual
+test on your project, please refer to the steps outlined in the DHS Trusted Tester User Guide. We have integrated this process
+into our workflow to ensure consistent and thorough testing for accessibility compliance.</p>
+
+<h2>Testing Order</h2>
+<p>The numbering of the tests within the test process do not necessarily indicate the order in which tests must be performed. Each tester and each
+application may determine the optimal testing order for coverage and productivity.</p>
+
+<p>It is recommended, however, that the first test performed is Test 1 Conforming Alternate Version. Identifying conforming alternate versions of
+content helps define the scope of testing and avoids unnecessary testing. Non-conforming content that has a conforming alternate version is
+excluded from testing.</p>
+
+<p>Test 2 Auto-Playing and Auto-Updating Content and Test 3 Flashing are next in the test process, followed by Test 4 Keyboard Access and Focus.
+These test WCAG success criteria that are covered in Conformance Requirement 5 Non-Interference. Failure to meet these success criteria could
+interfere with any use of the page and may indicate critical accessibility issues.</p>
+
+<p>The test process was designed to streamline the sequence for testers; however, testers may choose to do the tests (after Test 1) in their
+preferred order. Each Test Condition (after Test 1) is independent of the tests that precede, but some will reference tests that follow.</p>
+
+<h2>Issues Not Covered in This Test Process</h2>
+<p>Problems may be found during testing that may affect accessibility but are simply coding errors and often affect general usability for all users.
+An example might include a link that leads to the wrong target website. Testers may notify a developer of these issues as a comment on a report,
+but they do not typically result in a compliance failure as they are beyond the scope of the Revised 508 Standards.</p>
+
+<h2>The Rationale for Each Test</h2>
+<p>Previous versions of the Trusted Tester process document provided a rationale for each test based on interpretation of the Section 508 standards.
+With the Section 508 standards refresh and adoption of the WCAG 2.0 Success Criteria, this version of the test process relies principally on the
+rationale provided in <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/" target="_blank">Understanding WCAG 2.0: A guide to understanding and
+implementing Web Content Accessibility Guidelines 2.0</a>. The test process also relies on accompanying Trusted Tester training to provide additional description and guidance for understanding the logic that drives each test. Each step included in this test process document includes only the information necessary to execute the test. However, the Applicable Standards section of each test references the applicable WCAG 2.0 or Section 508 standard along with a link to the applicable article from the Understanding WCAG 2.0 document.</p>
+
+<div class="d-flex align-items-center">
+  <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/Test-Environment.html"
+  class="btn btn-md btn-success">Test Environment</a></div>
+</div>

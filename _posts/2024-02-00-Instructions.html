@@ -1,0 +1,261 @@
+---
+layout: template
+title:  "Instructions"
+date: 2024-02-21 07:32:53 -0700
+categories: [Resources]
+---
+<div class="row">
+  <div class="col-10">
+    <h1>{{ page.title }}</h1>
+
+    <p>All Evaluation Audits are conducted using the following process:</p>
+    <ol>
+      <li>Launch the <a href="{{ site.url }}/AEA-Process/create-report.html" target="_blank"><strong><em>AEA</em> reporting tool</strong></a> to record test results</li>
+      <li>Selecta previous JSON File or load a new JSON file: First time use <strong><a href="{{ sitel.url }}/assets/Resources/" download>Trusted Tester v.5.1.1</a></strong> (for web) or <strong><a href="{{ sitel.url }}/assets/Resources/SuccessCriteriaTT4.json" download>Trusted Tester v.4</a></strong> (for software) (TT5.1.1 or TT4) </li>
+      <li>Select Load File button.</li>
+      <li>Referande the Project Scope to complete each form and the required fields.</li>
+      <li>Add/Edit Test Results as needed</li>
+      <li>Save the file as-is in JSON format</li>
+      <li>Upon completion submit the JSON file to <strong><a href="mailto:kaffeinatedkodemonkey@gmail.com?subject=AEA JSON File">The A11y Dev Team</a></strong>.</li>
+    </ol>
+
+    <p><span class="text-danger"><span class="text-danger"><span class="text-danger">*</span></span></span> <strong><em>Make sure to report all accessibility issues in the <em>AEA</em> reporting tool.</em></strong></p>
+
+    <div class="accordion" id="accordionExample">
+      <!-- #1 Complete Report -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <strong>Complete Report</strong>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse collapsed" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+          <p>Complete required fields as indicated by a red asterisk. <span class="text-danger"><span class="text-danger"><span class="text-danger">*</span></span></span> </p>
+          <dl>
+            <dt>Select ‘Show Product Section’ Show/Hide Button</dt>
+            <dd>This expands the section to reveal all fields. The same button is also used to collapse and hide the fields.</dd>
+
+            <dt>Input Product Name <span class="text-danger"><span class="text-danger"><span class="text-danger">*</span></span></span></dt>
+            <dd>Complete the required form field, which has a character limit. The name is used to construct the filename of the saved JSON file.</dd>
+
+            <dt>Input Product Version <span class="text-danger"><span class="text-danger"><span class="text-danger">*</span></span></span></dt>
+            <dd>Complete the required form field which has a character limit. The version is used with the name to construct the filename of the saved JSON file.</dd>
+
+            <dt>Input Product Owner/Vendor</dt>
+            <dd>The form field is optional and has a character limit.</dd>
+
+            <dt>Select Product Type</dt>
+            <dd>The form field is optional. Use the dropdown menu and choose one:
+              <ul>
+                <li>Custom developed web page</li>
+                <li>COTS</li>
+                <li>Customization of COTS product</li>
+                <li>GOTS application</li>
+                <li>Software</li>
+                <li>Other</li>
+              </ul>
+            </dd>
+
+            <dt>Input Location</dt>
+            <dd>The form field is optional and has a character limit.</dd>
+
+            <dt>Input Product Description <span class="text-danger"><span class="text-danger"><span class="text-danger">*</span></span></span></dt>
+            <dd>Complete the required form field which has a character limit.</dd>
+
+            <dt>Input Notes</dt>
+            <dd>The form field is optional and has a character limit. Notes can include items such as summary of defects identified as global issues, questions about the application defects, embedded non-accessible documents, or any notes that would be of value.</dd>
+          </dl>
+
+          </div>
+        </div>
+      </div>
+      <!-- #2 Testing Information -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <strong>Testing Information</strong>
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Complete required fields as indicated by a red asterisk. <span class="text-danger"><span class="text-danger">*</span></span></p>
+
+            <dl>
+              <dt>Select the ‘Show Testing Information Section’ Show/Hide Button</dt>
+
+              <dd>This expands the section to reveal all fields. The same button is also used to collapse and hide the section.</dd>
+
+              <dt>Input Company Name <span class="text-danger"><span class="text-danger">*</span></span></dt>
+              <dd>Complete the required form field which has a character limit.</dd>
+
+              <dt>Input Tester’s First Name <span class="text-danger"><span class="text-danger">*</span></span></dt>
+              <dd>Complete the required form field.</dd>
+
+              <dt>Input Tester’s Last Name <span class="text-danger"><span class="text-danger">*</span></span></dt>
+              <dd>Complete the required form field.</dd>
+
+              <dt>Input Trusted Tester ID</dt>
+              <dd>This form field is optional but users are encouraged to provide a Trusted Testers certification number.</dd>
+
+              <dt>Input Tester’s Email <span class="text-danger"><span class="text-danger">*</span></span></dt>
+              <dd>Complete the required form field. Users have the option to use a government or a private email address.</dd>
+
+              <dt>Input Testing Scope</dt>
+              <dd>This form field is optional but is commonly used as a description or list of what was tested.</dd>
+
+              <dt>Verify Testing Method and Version</dt>
+              <dd>When the JSON file is loaded (refer to 2.1), these form fields are auto-populated and are read-only.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- #3 Test Environment Information -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>Test Environment Information</strong>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>This section does not contain any required fields but Trusted Testers are encouraged to complete this section.</p>
+
+            <dl>
+              <dt>Select the ‘Show Test Environment Section’ Show/Hide Button</dt>
+              <dd>This expands the section to reveal all fields. The same button is also used to collapse and hide the section.</dd>
+
+              <dt>Select the Browser Compatibility View</dt>
+              <dd>Use the dropdown menu to select:
+                <ul>
+                  <li>None</li>
+                  <li>Turned On</li>
+                  <li>Turned Off </li>
+                </ul>
+              </dd>
+
+              <dt>Choose Browser Type and Version</dt>
+              <dd>Select the type of browser used by navigating to the dropdown menu to select the browser type. More than one browser type and version can be selected.</dd>
+
+              <dt>Choose the Operating System and Version</dt>
+              <dd>Select the operating system used by navigating to the dropdown menu to select the version used. More than one operating system and version can be selected. If ‘Other Operating System’ is selected, additional form fields for the Name and Version will become available.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <!-- #4 Enter or Edit Test Results -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            <strong>Enter or Edit Test Results</strong>
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>This step cannot be completed without first uploading a JSON file</p>
+
+            <dl>
+              <dt>Locate the Test Results Form </dt>
+              <dd>Scroll down to find the Enter Test Results form. It is only visible after a valid JSON file is loaded</dd>
+
+              <dt>Enter the Test Results</dt>
+              <dd>Each row in the Test Results Form includes:
+                <ul>
+                  <li>A. Issue Number</li>
+                  <li>B. Test Name</li>
+                  <li>C. Test ID</li>
+                  <li>D. Test Condition</li>
+                  <li>E. Test Result - Use the dropdown to select
+                    <ul>
+                      <li>No Selection</li>
+                      <li>Pass</li>
+                      <li>Fail</li>
+                      <li>Does Not Apply</li>
+                    </ul>
+                  </li>
+                  <li>F. Browser - If the browser used for this test result is different it can be noted here.  When applicable, select the check box to change the browser. Use the dropdown to select the version of the browser used for the test.</li>
+                  <li>G. Tester Comments - The form field has a character limit and is used for any comments about the test.</li>
+                  <li>H. Location/Screen - The form field has a character limit and is used to provide details needed to locate the defect on the web page.</li>
+                  <li>I. Screenshot - After a test result is added, a ‘Choose File’ button will appear to add images to the corresponding test result. To add a screenshot, select the ‘Choose File’ button, select the image file (PNG, JPEG, or GIF), and select Open.</li>
+                  <li>J. Global Issue - Use the dropdown to select
+                    <ul>
+                      <li>None</li>
+                      <li>Yes</li>
+                      <li>No</li>
+                    </ul>
+                  </li>
+                  <li>K. Go to Parent/Add Child Issue - The Child Issue is a separate issue added that is associated to the same Test ID, the parent.</li>
+                </ul>
+              </dd>
+            </dl>
+
+            <dt>Additional Option: Remediation Details.
+            <dd>These columns are only available if ‘Show Remediation Detail’ is checked.
+              <ul>
+                <li>Remediation Details</li>
+                <li>Remediation Screenshot</li>
+                <li>Remediation Date</li>
+              </ul>
+            </dd>
+
+            <dt>Save The file will be saved to the system’s Downloads folder by default.</dt>
+          </div>
+        </div>
+      </div>
+
+      <!-- #5 Add Remediation Details -->
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            <strong>Add Remediation Details</strong>
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>Any accessibility issues that are not addressed before production release should be tracked within the test results generated using ACRT to be prioritized in the product backlog.  Trusted Testers should coordinate with their IT Project Manager regarding remediation details./</p>
+
+            <dl>
+              <dt>Load JSON file</dt>
+
+              <dt>Select the Checkbox for Show Remediation Detail Columns </dt>
+              <dd>Two columns are added to the report next to Global Issues.</dd>
+
+              <dt>Remediation Details</dt>
+              <dd>Include the steps taken to remediate the accessibility issues identified. This field has a character limit.  </dd>
+
+              <dt>Remediation Screenshot</dt>
+              <dd>Add in any images needed to document the remediation. To add a screenshot, select the ‘Choose File’ button, select the image file (PNG, JPEG, or GIF) and select Open.</dd>
+
+              <dt>Remediation Date</dt>
+              <dd>Provide the date the accessibility issues were remediated and finalized.</dd>
+
+              <dt>Enter the Remediation Details</dt>
+              <dd>Document the planned or remediated fix.  Additional remediation details could include:
+                <ul>
+                  <li>Remediation details for all test results that failed.  </li>
+                  <li>Ticket numbers and expected release number. Commercial off-the-shelf (COTS) products will need the commercial vendor to create issue tickets for remediation purposes. </li>
+                </ul>
+              </dd>
+
+              <dt>Enter the Remediation Date </dt>
+              <dd>Provide the estimated planned or fix release date of the remediation.</dd>
+
+              <dt>Save </dt>
+              <dd>The file will be saved to the system’s Downloads folder by default.</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="mt-5" />
+
+    <h2>Additional Information</h2>
+
+    <p>Or reach out to your A11y Dev or The Monkey <strong><em>(Working on a collaboration board)</em></strong>.</p>
+
+    <p>Make sure you review the project scpoe, as it will outline any spicale instructions and provide
+    required information to compleate <strong><em>AEA</em></strong>.</p>
+  </div>
+</div>

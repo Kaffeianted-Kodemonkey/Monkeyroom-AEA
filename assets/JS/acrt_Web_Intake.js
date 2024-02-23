@@ -1340,10 +1340,10 @@ $scope.createEditOption = 'Edit Report Test Results Form';
 // REMOVE CHILD ISSUE
     $scope.removeIssue = function(index) {
        	let removePosition=index+$scope.origSelectedResults;
-		//if ($scope.checkboxModel.alerts == "on")
-		//alert('Issue Removed.');
-       //let rmve = confirm("Do you want to remove child issue ?");
-	   //if (rmve == true){ }
+		if ($scope.checkboxModel.alerts == "on")
+		alert('Issue Removed.');
+       let rmve = confirm("Do you want to remove child issue ?");
+	   if (rmve == true){ }
 		$scope.removeIssueClicked = true;
       $scope.parentIssueSelected = $scope.parentIssueSelected-1;
 	  $scope.counterAddIssue=$scope.counterAddIssue-1;
@@ -1351,7 +1351,7 @@ $scope.createEditOption = 'Edit Report Test Results Form';
       $scope.addedRow[index] = false;
       $scope.Mul_Issues.splice(index, 1);
 	  $scope.Mul_Issues3.splice(index, 1);
-	  // document.getElementById("rmdTble").deleteRow(removePosition);
+	   document.getElementById("rmdTble").deleteRow(removePosition);
       $scope.indexCollection.splice(index, 1);
 	  $scope.issueClicked=$scope.issueClicked-1;
 

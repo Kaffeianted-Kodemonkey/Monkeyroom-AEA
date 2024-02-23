@@ -1,45 +1,80 @@
 
-  <div class="container-fluid ps-5 pt-5">
-    <h2>{{ page.title}}</h2>
-    <div class="row mx-5">
-      <div class= "col-md-7">
-        <p>Our programs offer valuable real-world experience allowing you to enhance your resume.
-        You'll be contributing to client or company projects based on your skills and project availability.</p>
+    <h1>Welcome to the {{ page.title}}  Process!</h1>
 
-        <p><strong><u>Program Levels:</u></strong></p>
-        <ol>
-          <li><strong>Mentee:</strong> Designed for entrly - jr level to gain experience - Unpaid Mentorship</li>
-          <li><strong>Inernship:</strong> Designed to inprove skills and boost work experience - Earn 10% commission on projects you complete</li>
-          <li><strong>Mentor:</strong> Designed to assist in our mentorship program and boost work experiance - Earn 10% commission on all projects
-          your mentee completes + an addition 10% on all projects you complete</li>
-        </ol>
-      </div>
-      <div class="col-4 mx-5 px-5">
-        <p><img src="/assets/img/a11y-social.png" alt="Kaffeinated Kodemonkey POCC Seal" style="width:13em; display: inline-block;position: relative; top:0em;left: -2em;"></p>
-      </div>
-    </div>
+    <p><img src="/assets/img/a11y-social.png" alt="Kaffeinated Kodemonkey POCC Seal" class="p-5" align="right" ></p>
 
-    <h2>Let's Begin</h2>
-    <div class="row mx-5">
-      <div class="col-12">
-        <p>To ensure smooth progress and efficient collaboration all interaction will be done via email or LinkedIn Messenger. <!-- all work will be tracked in HubSpot and GitHub.--></p>
+    <p>At Kaffeinated Kodemonkey, we prioritize accessibility and believe that all products should meet the highest
+    standards of ADA Compliance. To achieve this, we follow a rigorous process that involves the use of A11y tools,
+    screen readers, and various assistive technologies aligned with our <strong>Accessibility Evaluation Audit (AEA)</strong>
+    process.</p>
 
-        <p>For the evluation testing of all sites, we use the following assistive technologies and tools:</p>
+    <p>As an A11y Developer or Kodemonkey, your role is crucial in ensuring that products meet or exceed accessibility
+    standards. You will evaluate the product following the <strong>A11y Evaluation Audit Guidlines</strong>, using
+    <strong>screen readers, mobile devices, assistive technologies, WAVE,</strong> and any specified technologies
+    outlined in the project scope.</p>
+
+    <p>Before diving into any projects, it's crucial to thoroughly review the project scope. This will provide clarity
+    on the level of compliance required, whether it's <strong>WCAG/508, WCAG only, AA, or AAA</strong>.
+    Additionally, take note of any required or suggested testing methods unique to the project.</p>
+
+    <h2>Getting started with the <strong><em>AEA</em></strong> process:</h2>
+    <p>To streamline the AEA process, we understand the impracticality of conducting a manual evaluation on every page of a large site.
+    Therefore, within the project scope, you'll receive an Audit Report outlining the current status of the project. It's suggested to
+    kickstart the AEA reporting by verifying these results.</p>
+
+    <p>For most sites utilizing templates/themes, key items to review include:</p>
+
+    <ul>
+      <li>Site templates</li>
+      <li>Interactive forms</li>
+      <li>Dynamic content pages</li>
+      <li>Pages with dialog modals and alert notifications</li>
+      <li>Key entry and exit pages (including account login and recovery pages)</li>
+      <li>Any pages that process payments</li>
+      <li>Help and assistance pages</li>
+    </ul>
+
+    <h3>Understanding Dropdown Requirments</h3>
+    <p>Use the information povided in the Project Scope to complete the following sections: </p>
+
+    <div class="row">
+      <div class="col">
+        <h4><u>Procut:</u></h4>
         <ul>
-          <li><strong><a href="https://www.ssa.gov/accessibility/andi/help/install.html">ANDI</a></strong> a free open-source bookmarklet designed to help test web content for accessibility.</li>
-          <li><strong>Color Contrast Analyzer (CCA)</strong> an open-source tool displaying the contrast ratio for two selected colors. CCA is available at the following links:
-            <ul>
-              <li><a href="https://github.com/ThePacielloGroup/CCA-Win/releases/tag/2.5.0" target="_blank">CCA 2.5 for Windows</a></li>
-              <li><a href="https://github.com/ThePacielloGroup/CCA-OSX/releases/tag/2.4" target="_blank">CCA 2.4 for macOS</a></li>
-            </ul>
-          </li>
-          <li><strong><a href="https://wave.webaim.org/" target="_blank">WAVE</a></strong> Web accessibility browser plug-in</li>
-          <li><strong>Screen reader</strong>: NVDA, Jaws</li>
-          <li><strong>Mobile Devises</strong>: iSO, Andriod</li>
-          <li><strong>Acrobat</strong>: CommonLook PDF plug-in for evaluating PDF's</li>
+          <li><strong>Name: </strong>Use Company name or website name</li>
+          <li><strong>Version: </strong>V1 if the is the first time. Otherwise see project scope</li>
+          <li><strong>Owner: </strong>This is the Name of the Client or company</li>
+          <li><strong>Type: </strong>Most projects will select "Custom Developed Web page"</li>
+          <li><strong>Location: </strong>project url</li>
+            <li><strong>Description: </strong>This will be in the project Scope</li>
+          <li><strong>Notes: </strong>Any additional notes you feel are needed</li>
         </ul>
-
-        <p><a href="/create-report.html" class="mt-3 btn btn-md btn-success">Start Evaluation</a></p>
+      </div>
+      <div class="col">
+        <h4><u>Testing Information:</u></h4>
+        <ul>
+          <li><strong>Company Name:</strong> This is Kaffeinated Kodemonkey</li>
+          <li><strong>Tester's First Name:</strong> This is your first name</li>
+          <li><strong>Tester's Last Name:</strong> This is your last name</li>
+          <li><strong>Tester's ID:</strong> This is your Trusted Tester ID</li>
+          <li><strong>Tester's Email: </strong> This is Monkeyroom@KaffeinatedKodemonkey.com</li>
+          <li><strong>Testing Scope: </strong> This will be outlined in the project scope</li>
+        </ul>
+      </div>
+      <div class="col">
+        <h4><u>Testing Environment:</u></h4>
+        <ul>
+          <li><strong>Brow Compatibility View: </strong> This will alway be None unless stated otherwise in the project scope</li>
+          <li><strong>Browser:</strong> Select the browses and their version you use for testing</li>
+          <li><strong>Operating System: </strong>Note the operating system and version of the computer used for testing</li>
+        </ul>
       </div>
     </div>
-  </div>
+
+    <p>Remember, the Project Scope serves as a comprehensive guide, outlining any special instructions and providing essential information required to complete the <strong><em>AEA</em> Report</strong> successfully.</p>
+
+    <p class="mt-3"><a href="/AEA-Process/create-report.html" target="_blank" class="btn btn-lg btn-outline-success">Start A11y Evaluation Audit</a></p>
+
+    <!--  <div class="col-4 mx-5 px-5">
+        <p><img src="/assets/img/a11y-social.png" alt="Kaffeinated Kodemonkey POCC Seal" style="width:13em; display: inline-block;position: relative; top:0em;left: -2em;"></p>
+      </div>-->

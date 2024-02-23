@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+  {% include head.html %}
+
+  <body class="d-flex flex-column h-100">
+    {% include header.html %}
+
+    <div class="container-fluid">
+      <div class="row mx-3 my-3">
+        <div class="col-3">
+          <!-- Series links -->
+          <hr class="border border-success border-1 opacity-25">
+          <h3 class="text-success ps-4 pb-0">{{ page.series_title | upcase }} Series</h3>
+          <hr class="border border-success border-1 opacity-25">
+
+          {% assign posts = site.posts | where: "is_series", true | where: "series_title", page.series_title | sort: 'date' %}
+
+          {% for post in posts %}
+            {% if post.title == page.title %}
+            <p class="nav-link text-secondary ps-4 mb-0">{{ post.title }}</p>
+            {% else %}
+            <a class="nav-link text-primary-emphasis ps-4 " href="{{ post.url }}">{{ post.title }}</a>
+            {% endif %}
+          {% endfor %}
+
+        </div>
+        <div class="col-9 pt-4">
+          <h1>{{ page.title }}</h1>
+
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    {% include footer.html %}
+
+  </body>
+</html>

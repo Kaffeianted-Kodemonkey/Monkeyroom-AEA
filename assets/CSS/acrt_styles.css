@@ -425,15 +425,16 @@ fieldset
    /*position: fixed; */
    position: relative;
    left: 0;
-   bottom: 0;
+   bottom: 30px;
    padding-left: 2em;
-   width: 50%;
+   padding-bottom: .5em;
+   width: 40%;
    background-color: white;
    color: black;
    text-align: left;
    font-family: "Source Sans Pro", "Franklin Gothic Book","system-ui", "Segoe UI", "Ubuntu", "'Helvetica Neue", "sans-serif";
-   border-style: outset;
-   border-radius: 10px;
+   /*border-style: outset;
+   border-radius: 10px;*/
 }
 
 .collapsible {

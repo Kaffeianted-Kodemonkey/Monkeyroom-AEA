@@ -1,0 +1,346 @@
+---
+layout: userguide
+title:  "1. Conforming Alternate Version (CAV)"
+date: 2024-02-05 07:32:53 -0700
+categories: [User_Guide]
+is_series: true
+series_title: User Guide
+---
+<div class="accordion mb-5" id="accordionExample">
+  <!-- #1.A -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        <strong>Accessible Alternate Version</strong>
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h3>Identify Content</h3>
+        <p>Per WCAG 2.1, accessible versions should be identified, e.g., through a label on the page, as a link, in documentation, user
+        preferences, controls to modify text appearance, etc. It may be helpful to review product documentation for information about
+        accessible versions or enabling accessibility.</p>
+
+        <p>Alternate versions may be provided for a part of the page, entire pages, or an entire site. A web page or site may have more
+        than one version of content or features. It is also possible that a site has more than one instance of conforming alternate version.
+        The following are some indications that content is provided in more than one way.</p>
+        <ul>
+          <li>Content is identified as the accessible version</li>
+          <li>Instructions are provided that describe how to enable accessibility</li>
+          <li>Multiple methods are provided to complete a task (e.g., a calendar widget and a text field are provided for a user to enter a date)</li>
+          <li>A link’s destination is an accessible alternate version or a version for assistive technology (e.g., screen reader version)</li>
+          <li>User preferences or settings are provided to enable accessibility</li>
+          <li>User controls exist to modify colors and text appearance</li>
+        </ul>
+
+        <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/conformance#conforming-alt-versions" target="_blank">Per WCAG's definition</a>,
+        the identified version “does not need to reside within the scope of conformance, or even on the same web site, as long as it is as freely
+        available as the non-conforming version.” However, the scope of testing with this process is limited to web-based alternatives that are
+        available on a desktop computer. Alternate versions do not include mobile applications that can only be accessed on a mobile device.</p>
+
+        <p>If there is more than one version and none are identified as the conforming alternate version/accessible version, assume there is no
+        conforming alternate version and that these Conforming Alternate Version tests DO NOT APPLY. Perform tests 2 through 20 on all versions.</p>
+
+        <h3>Check alt-version-conformant</h3>
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Test Name</th>
+              <th scope="col">Test ID</th>
+              <th scope="col">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">alt-version-conformant</th>
+              <td>1.A</td>
+              <td>The identified version passes all applicable Test Conditions in this test process.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition DOES NOT APPLY (DNA) if: </p>
+        <ul>
+          <li>There is only one version of content</li>
+          OR
+          <li>If no versions are identified as the conforming alternate version/accessible version.</li>
+        </ul>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Enable accessibility settings (if necessary), select, and/or navigate to the version of content identified as the accessible alternate version. </li>
+          <li>Following this test process, test the identified version of the content for all applicable Test Conditions. Record the result for the appropriate Test ID.
+            <ol type="a">
+              <li>If no failures are found, this may be a conforming alternate version.</li>
+              <li>If a failure is found, the identified version is not a conforming alternate version.</li>
+            </ol>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is TRUE, then the content PASSES; if the following is FALSE, then this Test Condition FAILS:</li>
+        <ol>
+          <li>The identified version of content passes all applicable Test Conditions in this test process.</li>
+        </ol>
+
+        <h3><strong>Note:</strong></h3>
+        <p>Alternate versions may be provided to accommodate different technology environments or user groups.
+        At least one version would need to pass all Test Conditions.</p>
+      </div>
+    </div>
+  </div>
+  <!-- #1.B -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        <strong>Equivalent Alternative</strong>
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h3>Check alt-version-equivalent</h3>
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Test Name</th>
+              <th scope="col">Test ID</th>
+              <th scope="col">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">alt-version-equivalent</th>
+              <td>1.B</td>
+              <td>The identified version is up to date with the same information and functionality.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition DOES NOT APPLY if Test ID 1.A was evaluated as DOES NOT APPLY (DNA).</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Continue from Test 1.A.</li>
+          <li>Review the content of the non-conforming version.</li>
+          <li>Verify that the identified version has the same information,
+          functionality, and language as the non-conforming version.</li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong>TRUE</strong>, then the content <strong>PASSES</strong>; if the following is <strong>FALSE</strong>,
+        then this Test Condition <strong>FAILS</strong>:</p>
+        <ol>
+          <li>The identified version provides all of the same information and functionality in the same human language as the
+          non-conforming content. </li>
+        </ol>
+
+        <h3>Note:</h3>
+        <ul>
+          <li>Per <strong>WCAG</strong>, the identified version “does not need to be matched page for page with the original
+          (e.g., the identified version may consist of more or fewer pages).”</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- #1.C -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        <strong>Conforming Mechanism</strong>
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h3>Identify Content</h3>
+        <p>Identify the mechanism used to access the identified version. Various mechanisms may be used to reach the identified version, such as: </p>
+        <ul>
+          <li>A link to the identified version or a version for assistive technology (e.g., screen reader version)</li>
+          <li>User preferences or settings to enable accessibility for a page or the entire site</li>
+          <li>User controls to modify colors and text appearance of the page or entire site</li>
+          <li>Navigating to the identified accessible version of content on a page</li>
+        </ul>
+
+        <h3>Check alt-version-access</h3>
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Test Name</th>
+              <th scope="col">Test ID</th>
+              <th scope="col">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">alt-version-access</th>
+              <td>1.C</td>
+              <td>The mechanism to reach the identified version is accessible.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong>DOES NOT APPLY</strong> if Test <strong>ID 1.A</strong> was evaluated as <strong>DOES NOT APPLY (DNA)</strong>.
+
+        <h4>How to Test:</strong></h4>
+        <ol>
+          <li>Perform Tests 2 through 20 for the mechanism used to reach the identified version.</li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong>TRUE</strong>, then the content <strong>PASSES</strong>; if the following is <strong>FALSE</strong>,
+        then this Test Condition <strong>FAILS</strong>:</p>
+        <ol>
+          <li>The mechanism used to reach the accessible equivalent version passes all applicable Test Conditions.</li>
+        </ol>
+
+        <h4>Notes:</h4>
+        <ul>
+          <li>Applicable mechanism tests may include Links and Buttons, Headings, Forms, and/or other tests.</li>
+          <li>The mechanism to access the conforming version should directly or indirectly indicate that it leads to the accessible version.
+          For example, text preceding a link to the accessible version might directly state that the link leads to the accessible version.
+          It may also be possible to “hide” non-conforming content from AT and/or exclude it from keyboard focus, thereby limiting access only
+          to the accessible version for users with disabilities. Such an approach, however, may not be possible, depending on the content.</li>
+          <li>The mechanism may be explicitly provided in the content or may be relied upon to be provided by either the platform or by user
+          agents, including assistive technologies.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- #1.D -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+        <strong>Non-Interference</strong>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h3>Identify Content</h3>
+        <p>The non-conforming version(s) of the content. Exclude the version identified as the accessible version.</p>
+
+        <h3>Check non-interference</h3>
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col">Test Name</th>
+              <th scope="col">Test ID</th>
+              <th scope="col">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">non-interference</th>
+              <td>1.D</td>
+              <td>Content in the non-conforming version(s) meets Conformance Requirement 5.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong>DOES NOT APPLY</strong> if Test <strong>ID 1.A</strong> was evaluated as
+        <strong>DOES NOT APPLY (DNA)</strong>.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>If necessary and/or applicable, disable accessibility features within site settings or preferences.</li>
+          <li>Perform ONLY the following tests on the non-conforming version(s) of the content:
+            <ol type="a">
+              <li>Test ID 2.A (1.4.2-audio-control)</li>
+              <li>Test ID 2.B (2.2.2-blinking-moving-scrolling)</li>
+              <li>Test ID 2.C (2.2.2-auto-updating)</li>
+              <li>Test ID 3.A (2.3.1-flashing)</li>
+              <li>Test ID 4.C (2.1.2-no-keyboard-trap)</li>
+            </ol>
+          </li>
+          <li>Enter test results for the appropriate Test IDs listed above.</li>
+          <li>Do not perform any further testing on the non-conforming version(s) of the content. </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong>TRUE</strong>, then the content <strong>PASSES</strong>. If the following is <strong>FALSE</strong>,
+        then this Test Condition <strong>FAILS</strong>:</p>
+        <ol>
+          <li>The results for each of the following tests are PASS or DOES NOT APPLY for all non-conforming version(s) of the content.
+            <ol type="a">
+              <li>Test ID 2.A (1.4.2-audio-control)</li>
+              <li>Test ID 2.B (2.2.2-blinking-moving-scrolling)</li>
+              <li>Test ID 2.C (2.2.2-auto-updating)</li>
+              <li>Test ID 3.A (2.3.1-flashing)</li>
+              <li>Test ID 4.C (2.1.2-no-keyboard-trap)</li>
+            </ol>
+          </li>
+        </ol>
+
+        <h3>Note: </h3>
+        <ul>
+          <li>Enter a single result for all non-conforming versions of content. (<strong>FAIL</strong> if any of the versions fail;
+          <strong>PASS</strong> if at least one result is Pass and the others are Pass or Does not apply; <strong>DOES NOT APPLY</strong>
+          if all results are Does Not Apply.)</li>
+          <li>3.A (2.3.1 flashing) must have a test result of <strong>DOES NOT APPLY</strong> in order to meet the 1.D,
+          Non-Interference Test Condition. A test result of <strong>NOT TESTED</strong> does not meet the 1.D Test Condition.
+          See Test ID 3.A for further details.</li>
+          <li>After performing this test on the non-conforming version of content that has a conforming alternate version for
+          the content, omit testing of the non-conforming content from the rest of testing.</li>
+          <li>While a conforming alternate version of content might have been confirmed under Tests 1.A through 1.C, a content owner
+          <strong>CANNOT</strong> make a claim of conformance to the Section 508 standards if any version of content fails Test
+          <strong>ID 1.D</strong> non-interference, including content that is not otherwise relied upon to meet conformance.</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- #Applicable Standards -->
+  <div class="accordion-item">
+   <h2 class="accordion-header">
+     <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+       <strong>Applicable Standards</strong>
+     </button>
+   </h2>
+   <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse">
+     <div class="accordion-body">
+       <table class="table border">
+         <thead>
+           <tr class="table-primary">
+             <th scope="col">Section 508/WCAG Success Criteria</th>
+             <th scope="col">Baseline Requirements</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>
+                <p>Conforming alternate version is not a requirement. Conformance requirement #1 allows non-conforming pages to be included within the scope of conformance as long as they have a "conforming alternate version". This ensures that all of the information and all of the functionality that is on the pages inside of the scope of conformance is available on conforming Web pages.</p>
+            </td>
+             <td>
+               <p>20. Conforming Alternate Versions</p>
+             </td>
+           </tr>
+           <tr>
+             <td>
+               <p>WCAG Conformance Requirement 3. Non-Interference: The following success criteria apply to all content on the page,
+                including content that is not otherwise relied upon to meet conformance, because failure to meet them could interfere
+                with any use of the page:</p>
+                <ul>
+                  <li>1.4.2 - Audio Control,</li>
+                  <li>2.1.2 - No Keyboard Trap,</li>
+                  <li>2.3.1 - Three Flashes or Below Threshold, and</li>
+                  <li>2.2.2 - Pause, Stop, Hide.</li>
+                </ul>
+              </td>
+              <td>
+                <p>3. Non-Interference</p>
+              </td>
+            </tr>
+         </tbody>
+       </table>
+     </div>
+   </div>
+ </div>
+</div>
+
+<div class="d-flex align-items-center">
+  <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/2.-Auto-Playing-and-Auto-Updating-Content.html"
+  class="btn btn-md btn-success">2. Auto-Playing and Auto-Updating Content</a></div>
+</div>
