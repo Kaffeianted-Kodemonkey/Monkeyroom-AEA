@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+  {% include head.html %}
+
+  <body class="d-flex flex-column h-100">
+    {% include header.html %}
+
+    <div class="container-fluid">
+      <div class="row mx-3 my-3">
+        <div class="col-3">
+
+          <hr class="border border-success border-1 opacity-25">
+          <h3 class="text-success ps-4 pb-0">{{ page.tag }}</h3>
+          <hr class="border border-success border-1 opacity-25">
+
+          {% for tag in site.tags == {{ page.tag }} %}
+            <ul>
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            </ul>
+          {% endfor %}
+
+          {% if page.tag == "A11y" %}
+          <ul>
+            <li><a href="{{ site.url }}/pocc.html">POCC Overview</a></li>
+            <li><a href="{{ site.url }}/">WCAG Report</a></li>
+            <li><a href="{{ site.url }}/">Accessibility Statement</a></li>
+            <li><a href="{{ site.url }}/disclaimer.html">Accessibility Conformacne Report</a></li>
+          </ul>
+          {% endif %}
+
+          {% if page.tag == "Policy" %}
+          <ul>
+            <li><a href="{{ site.url }}/disclaimer.html">Disclaimer</a></li>
+            <li><a href="{{ site.url }}/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="{{ site.url }}/terms-service.html">Terms of Services</a></li>
+            <li><a href="{{ site.url }}/license.html">MIT License</a></li>
+          </ul>
+          {% endif %}
+        </div>
+        <div class="col-9 pt-4">
+          <h1>{{ page.title }}</h1>
+
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <br><br>
+
+    {% include footer.html %}
+
+  </body>
+</html>

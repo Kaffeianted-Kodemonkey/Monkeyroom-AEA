@@ -11,7 +11,7 @@
         <div class="col-3">
           <!-- Series links -->
           <hr class="border border-success border-1 opacity-25">
-          <h3 class="text-success ps-4 pb-0">{{ page.series_title | upcase }} Series</h3>
+          <h3 class="text-success ps-4 pb-0">{{ page.series_title | upcase }}</h3>
           <hr class="border border-success border-1 opacity-25">
 
           {% assign posts = site.posts | where: "is_series", true | where: "series_title", page.series_title | sort: 'date' %}
@@ -23,6 +23,13 @@
             <a class="nav-link text-primary-emphasis ps-4 " href="{{ post.url }}">{{ post.title }}</a>
             {% endif %}
           {% endfor %}
+
+          {% if page.series_title == "VPAT Guide" %}
+            <hr class="border border-success border-1 opacity-25">
+            <h3 class="text-success mt-3 ps-4 pb-0">VPAT Versions</h3>
+            <hr class="border border-success border-1 opacity-25">
+            <p><a class="nav-link text-primary-emphasis ps-4 " href="{{ site.url }}/assets/Resources/VPAT2.2.doc" download>VPAT 2.2 - WCAG <i class="bi bi-arrow-down"></i></a></p>
+          {% endif %}
 
         </div>
         <div class="col-9 pt-4">

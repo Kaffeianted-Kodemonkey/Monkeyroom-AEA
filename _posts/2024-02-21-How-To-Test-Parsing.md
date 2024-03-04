@@ -1,8 +1,11 @@
 ---
-layout: template
+layout: series
 title: How to Test Parsing
 date:  2024-02-21 07:32:53 -0700
-categories: [Resources]
+category: Resources
+permalink: /resorces/parsing.html
+is_series: true
+series_title: Resources
 ---
 
 <h1>{{ page.title }}:</h1>

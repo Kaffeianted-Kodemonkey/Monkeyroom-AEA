@@ -1,8 +1,11 @@
 ---
-layout: post
+layout: series
 title:  "Welcome to Jekyll!"
 date:   2032-07-31 21:28:53 -0600
-categories: jekyll update
+category: Resources
+permalink: /resources/Welcome-Jekyll.html
+is_series: true
+series_title: Resources
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
