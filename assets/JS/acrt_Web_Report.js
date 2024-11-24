@@ -203,7 +203,7 @@ $scope.displayTestResult = function() {
 	if($scope.selected_name_tstrsltdsply == 'Not Tested' ) {$scope.displaytstRslt=true; $scope.filterResult = 'Not Tested';}
 }
 
-  $scope.load = function() {
+$scope.load = function() {
 	function KeyPress(e) {
       var evtobj = window.event? event : e
 
@@ -221,7 +221,7 @@ $scope.displayTestResult = function() {
    document.getElementById("buttonLoad").focus();
  }
 
-  $scope.tstRsltMsg = function() {
+$scope.tstRsltMsg = function() {
     //alert($scope.checked1);
     if ($scope.checked1 == 'false' )
     document.getElementById("msg").innerHTML = "Check checkbox for detailed Test Results.";
@@ -229,7 +229,7 @@ $scope.displayTestResult = function() {
     document.getElementById("msg").innerHTML = "Uncheck checkbox to hide Test Results.";
   }
 
-  $scope.fileInput = function fileInput() {
+$scope.fileInput = function fileInput() {
     $scope.fileInput1 = true;
   }
 
@@ -568,7 +568,7 @@ function receivedText(e) {
 	$scope.TotalPhotosensitive = $scope.Photosensitive;
 	$scope.TotalPhotosensitiveList = 'Photosensitive Epilepsy / Photosensitive Seizure Disorders ('+$scope.Photosensitive+')';
 
-	//MObility
+	//Mobility
   $scope.TotalMobility = 0;
   if($scope.DisabilityRiskScoreJSON.Manipulation == null) $scope.DisabilityRiskScoreJSON.Manipulation =0;
   $scope.Manipulation = $scope.DisabilityRiskScoreJSON.Manipulation;
@@ -819,6 +819,9 @@ $scope.saveHtml = function() {
   "<head>" +
   "<title>"+$scope.productID+" AEA</title>" +
 
+  "<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\ integrity=\"sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH\" crossorigin=\"anonymous\">" +
+  "<script src=\"https\://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz\" crossorigin=\"anonymous\"></script>" +
+
   "<style>  body{font-family: \"Franklin Gothic Book\", \"system-ui\",\"Segoe UI\",\"Ubuntu\",\"Helvetica Neue\",\"sans-serif\";} h1,h2{color: #F8F8FF; background-color: rgb(0, 51, 102);font-family: \"Franklin Gothic Book\",\"system-ui\",\"Segoe UI\",\"Ubuntu\",\"Helvetica Neue\",\"sans-serif\";}  table { font-family: \"system-ui\",\"Segoe UI\",\"Ubuntu\",\"Helvetica Neue\",\"sans-serif\"; text-decoration:none; border-collapse: collapse; width: 100%; display:block; padding: 3px; } td, th { border: 1px solid #A9A9A9; text-align: left; padding: 3px;font-family: \"system-ui\",\"Segoe UI\",\"Ubuntu\",\"Helvetica Neue\",\"sans-serif\";} th{vertical-align: top;} tr:nth-child(even) { background-color: #F0FFFF; padding-top: 0px; padding-bottom: 0px;font-family: \"system-ui\",\"Segoe UI\",\"Ubuntu\",\"Helvetica Neue\",\"sans-serif\";} tr, th {vertical-align: top;} @media print {#printPageButton {display: none;}} @media print {.pagebreak { page-break-before: always; } /* page-break-after works, as well */ }</style>" +
 
   "</head>" +
@@ -828,42 +831,65 @@ $scope.saveHtml = function() {
 
   "<button id=\"printPageButton\" style=\"background-color:rgb(0, 51, 102); color: white; padding-left: 0em; text-align: center; width: 15%;font-size: 100%;border: 2px solid black;border-radius: 5px;\" onclick=\"myPrint()\">Print this page</button> <br>" +
 
-  "<h1>"+$scope.companyname+" AEA Report </h1>" +
+  "<h1 class='mt-3'>"+$scope.companyname+" AEA Report </h1>" +
   // "<span> Based on VPAT® Version 2.4 </span>"+
 
   "<h2 id=\"draftMsg\"  style=\"color: #FFFFFF; background-color: #be0004;\" hidden>" + $scope.draftMsg  +"</h2> " +
-  "<p>This product was tested using the Trusted Tester Section 508 Conformance Test method: " + $scope.evalMethod +" "+ $scope.evalMethodVrsn + ". <br>" +
-  "The A11y Audit scans the product and outlines any A11y issues found. <br> A TTAD manually evaluates a sampling of pages to confirm the results are accurate and no further testing is need. <br>" +
-  "The responsibility for full and complete testing and compliance remains with the owner of the product.</p>" +
+  "<p>This product has undergone evaluation using the Trusted Tester Section 508 Conformance Testing method: " + $scope.evalMethod +" "+ $scope.evalMethodVrsn + ". </p>" +
+
+  "<p>Tester (TT) conducted a comprehensive Accessibility Audit to assess the website's compliance with WCAG 2.1 Level AA standards. <br>" +
+  "Any unresolved issues have been meticulously documented in the Accessibility Statement Technical Specifications.</p>" +
+
+  "<p>Responsibility for ensuring ongoing compliance rests with the product owner, who is obligated to renew the Proof of Compliance " +
+  "Certificate (POCC) annually or anytime modifications are made to the website.</p>" +
+
+  "<!--The A11y Audit scans the product and outlines any A11y issues found. <br> A TTAD manually evaluates a sampling of pages to confirm the results are accurate and no further testing is need. <br>" +
+  "The responsibility for full and complete testing and compliance remains with the owner of the product.</p> -->" +
 
   "<b>Review Date:  &nbsp;  </b>" + $scope.dateSubmitted + "<br>" +
-  "<h2> Product Information </h2>" +
-  "<input type=\"text\" hidden id=\"isDraftValue\" value=" +  $scope.isDraft+ "> "   +
-  "<b> Product Name:  &nbsp;  </b>" + $scope.productID + "<br>" +
-  "<b>Product Version:  &nbsp;  </b>" + $scope.ownerID + "<br>" +
-  "<b>Product Owner/Vendor:  &nbsp;  </b>" + $scope.versionID + "<br>" +
-  "<b>Product Type:  &nbsp;  </b>" + $scope.productType + "<br>" +
-  "<b>Location:  &nbsp;  </b>" + $scope.urlID + "<br>" +
-  "<b>Product Description:  &nbsp;  </b>" + $scope.prodDescID + "<br>" +
+  "<hr>" +
+  "<div class='row mt-3'>" +
+    "<div class='col-6'>" +
+      "<h2> Product Information </h2>" +
+      "<input type=\"text\" hidden id=\"isDraftValue\" value=" +  $scope.isDraft+ "> "   +
+      "<b> Product Name:  &nbsp;  </b>" + $scope.productID + "<br>" +
+      "<b>Product Version:  &nbsp;  </b>" + $scope.ownerID + "<br>" +
+      "<b>Product Owner/Vendor:  &nbsp;  </b>" + $scope.versionID + "<br>" +
+      "<b>Product Type:  &nbsp;  </b>" + $scope.productType + "<br>" +
+      "<b>Location:  &nbsp;  </b>" + $scope.urlID + "<br>" +
+      "<b>Product Description:  &nbsp;  </b>" + $scope.prodDescID + "<br>" +
+    "</div>" +
+    "<div class='col-6'>" +
+      "<h2> Tester's Information </h2>" +
+      "<strong>Tester's First Name:  &nbsp;  </strong>" + $scope.firstname + "<br>" +
+      "<strong>Tester's Last Name:  &nbsp;  </strong>" + $scope.lastname + "<br>" +
+      "<strong>Trusted Tester ID:  &nbsp;  </strong>" + $scope.testerID + "<br>" +
+      "<strong>Company Name:  &nbsp;  </strong>" + $scope.companyname + "<br>" +
+      "<strong>Tester's Email:  &nbsp;  </strong>" + $scope.testerContact + "<br>" +
+      "<strong>Notes:  &nbsp;  </strong>" + $scope.testScope + "<br>" +
+    "</div>" +
+  "</div>" +
 
-  "<h2> Tester's Information </h2>" +
-  "<strong>Tester's First Name:  &nbsp;  </strong>" + $scope.firstname + "<br>" +
-  "<strong>Tester's Last Name:  &nbsp;  </strong>" + $scope.lastname + "<br>" +
-  "<strong>Trusted Tester ID:  &nbsp;  </strong>" + $scope.testerID + "<br>" +
-  "<strong>Company Name:  &nbsp;  </strong>" + $scope.companyname + "<br>" +
-  "<strong>Tester's Email:  &nbsp;  </strong>" + $scope.testerContact + "<br>" +
-  "<strong>Notes:  &nbsp;  </strong>" + $scope.testScope + "<br>" +
+  "<div class=\"pagebreak\"> </div>"+
 
-  "<h2> Test Environment Information </h2>" +
-  "<strong>Browser:  &nbsp;  </strong>" + $scope.myBrowserTested + "<br>" +
-  "<strong>Browser Version: &nbsp;  </strong>" + $scope.myBrowser + "<br>" +
-  //"<strong>Compatibility View:  &nbsp;  </strong>" + $scope.compID + "<br>" +
-  "<strong>Operating System:  &nbsp;  </strong>" + $scope.myOpsysTested + "<br>" +
-  //"<strong>Operating System Version:  &nbsp;  </strong>" + $scope.myOpsys + "<br>" +
+  "<div class='row mt-3'>" +
+    "<div class='col-12'>" +
+      "<h2>Test Environment Information </h2>" +
+      "<strong>Browser:  &nbsp;  </strong>" + $scope.myBrowserTested + "<br>" +
+      "<strong>Browser Version: &nbsp;  </strong>" + $scope.myBrowser + "<br>" +
+      //"<strong>Compatibility View:  &nbsp;  </strong>" + $scope.compID + "<br>" +
+      "<strong>Operating System:  &nbsp;  </strong>" + $scope.myOpsysTested + "<br>" +
+      //"<strong>Operating System Version:  &nbsp;  </strong>" + $scope.myOpsys + "<br>" +
 
-  "<strong>Testing Method:  &nbsp;  </strong>" + $scope.evalMethod + "<br>" +
-  "<strong>Testing Method Version:  &nbsp;  </strong>" + $scope.evalMethodVrsn + "<br>" +
-  "<h2> Terms used in the Conformance Level </h2> <ul> <li> <strong>Supports:</strong> The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation. </li>  <li> <strong>Does Not Support:</strong> The majority of product functionality does not meet the criterion.</li> <li> <strong>Not Applicable:</strong> The criterion is not relevant to the product. </li> <li> <strong>Not Evaluated:</strong> The product has not been evaluated against the criterion.  This can only be used in WCAG 2.x Level AAA.</li> </ul> <br>" +
+      "<strong>Testing Method:  &nbsp;  </strong>" + $scope.evalMethod + "<br>" +
+      "<strong>Testing Method Version:  &nbsp;  </strong>" + $scope.evalMethodVrsn + "<br>" +
+    "</div>" +
+  "</div>" +
+  "<div class='row mt-5'>" +
+    "<div class='col-12'>" +
+      "<h2> Terms used in the Conformance Level </h2> <ul> <li> <strong>Supports:</strong> The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation. </li>  <li> <strong>Does Not Support:</strong> The majority of product functionality does not meet the criterion.</li> <li> <strong>Not Applicable:</strong> The criterion is not relevant to the product. </li> <li> <strong>Not Evaluated:</strong> The product has not been evaluated against the criterion.  This can only be used in WCAG 2.x Level AAA.</li> </ul> <br>" +
+    "</div>" +
+  "</div> <br>" +
 
   "<div class=\"pagebreak\"> </div>"+
 
@@ -871,7 +897,7 @@ $scope.saveHtml = function() {
 
   "<!--<div class=\"pagebreak\"> </div>-->"+
 
-  "<h2> Test Results </h2>" + testResult + "<br>" +
+  "<!-- <h2> Test Results </h2>" + testResult + "<br> -->" +
   "<h2> Disability Impact Score </h2>" +$scope.impctInfoMsg+"<br><br> <strong>Risk Score: "+$scope.TotalImpactedGroupNo+"</strong><br>"+ RSCSCORE + "<br><br>" +
   //"<b>Your feedback is important to us! Please take the <a title=\"ACRT Survey\" href= \"https://www.surveymonkey.com/r/DHSACRT\" target=\"_blank\"   id=\"surveyID\"> ACRT Survey </a> </b>"+
   //"<h2> End of Report </h2>" +

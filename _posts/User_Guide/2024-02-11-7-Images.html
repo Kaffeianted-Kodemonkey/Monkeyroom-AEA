@@ -12,40 +12,364 @@ series_title: User Guide
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
+          7.A-meaningful-image-name
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <h3>Identify Content</h3>
+        <p>Use the <strong class="text-uppercase">ANDI</strong>: graphics/images module to find the images. Start with the first image outlined by
+        <strong class="text-uppercase">ANDI</strong>: graphics/images.</p>
+
+        <p>Use the “Focus on next element” button to find all images on the page. For each image found by
+        <strong class="text-uppercase">ANDI</strong>: graphics/images, determine if the image is meaningful or decorative.</p>
+
+        <ul>
+          <li>All images which convey information should be considered meaningful images.</li>
+          <li>Images that are pure decoration, used only for visual formatting, or are not presented to users, should be considered decorative.
+          Examples of this are:
+            <ul>
+              <li>a swirl in the corner that conveys no information but just fills up a blank space to create an aesthetic effect</li>
+              <li>images used as bullet points</li>
+              <li>an abstract graphic used to separate sections of a page</li>
+              <li>an invisible image that is used to track usage statistics</li>
+              <li>part of a link to improve appearance or to increase the clickable area</li>
+            </ul>
+          </li>
+          <li>Images are not pure decoration if they serve to illustrate text content, suggest mood or tone, or create specific sensory experiences,
+          such as a section dividers or bullet icons that use imagery or designs that convey specific moods or tones. If they convey any information,
+          AT users shouldvreceive the same benefit of that information.</li>
+        </ul>
+
+        <h3>Note:</h3>
+        <ul>
+          <li><strong class="text-uppercase">ANDI</strong> may identify images that are included as a sub-component of a focusable element.
+          In such cases, test the image using the <strong class="text-uppercase">ANDI</strong>: focusable elements module instead.</li>
+          <li>WCAG defines “pure decoration” as “serving only an aesthetic purpose, providing no information, and having no functionality.”</li>
+          <li>WCAG defines “specific sensory experiences” as “a sensory experience that is not purely decorative and does not primarily convey important information or perform a function.”</li>
+        </ul>
+
+        <p>If there is no such content, the result for the following test ID(s) is <strong class="text-uppercase">DOES NOT APPLY: 7.A to 7.B.</strong></p>
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">1.1.1-meaningful-image-name</th>
+              <td>7.A</td>
+              <td>The accessible name and accessible description for a meaningful image provides an equivalent description of the image</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if there are no meaningful images on the page.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>1. Review the ANDI Output for the meaningful image.
+            <ol type="a">
+              <li>The <strong class="text-uppercase">ANDI</strong> Output must provide an equivalent description of the image. This can be
+              provided by a brief description of the image in the ANDI Output and instructions about where to obtain the full description.</li>
+              <li>If the image is used as a CAPTCHA, ANDI Output describes the purpose of the <strong class="text-uppercase">CAPTCHA</strong>.</li>
+              <li>If the image is of meaningful text, ANDI Output contains the same text.</li>
+              <li>If an image is a component or child of a focusable element (e.g., a button or a link), evaluate the accessible name for the entire
+              focusable element, not just the image. Use ANDI: focusable elements (and/or ANDI: links/buttons if applicable) to determine the accessible
+              name for the combined component.</li>
+            </ol>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong class="text-uppercase">TRUE</strong>, then the content <strong class="text-uppercase">PASSES</strong>:</p>
+
+        <p>The combination of the programmatically determined link context and the <strong class="text-uppercase">ANDI</strong> Output provide
+        adequate description of the link’s purpose.</p>
+
+        <h4>Note:</h4>
+        <ul>
+          <li>Any changes to meaningful images that occur automatically or as a result of interaction with the page should be included in this test.</li>
+          <li>Notification of automatic changes are tested in Test 2.D.</li>
+          <li>Notification of changes as a result of interaction with other content are tested either in Test 5.E or 6.B.</li>
+          <li>An image that is on the page but not detected by ANDI as described in Identify Content should not be included in this test.</li>
+          <li>The ANDI Output is empty for an image that has role=“presentation” or aria- hidden=“true”. These should not be set for meaningful images, which must have an equivalent description in ANDI Output.</li>
+        </ul>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
+        7.B-decorative-image
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">1.1.1-decorative-image</th>
+              <td>7.B</td>
+              <td>There is no accessible name and accessible description for adecorative image.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if there are no decorative images on the page.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>1. Review the ANDI Output for the decorative image.</li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong class="text-uppercase">TRUE</strong>, then the content <strong class="text-uppercase">PASSES</strong>:</p>
+
+        <p>The <strong class="text-uppercase">ANDI</strong> Output for a decorative image is blank.</p>
+
+        <h4>Note:</h4>
+        <ul>
+          <li>An image that is on the page but not detected by ANDI as described in Identify Content should not be included in this test.
+          Some decorative images are background images and should be tested and reported in 7.C.</li>
+          <li>Any changes to decorative images that occur automatically or as a result of interaction with the page should be included in this test.</li>
+          <li>The <strong class="text-upper">ANDI</strong> Output is empty for an image that has role=“presentation” or aria- hidden=“true”.
+          These are two techniques to hide an image from assistive technology and are appropriate for decorative content.</li>
+        </ul>
       </div>
     </div>
   </div>
+  <!-- CSS Background Images -->
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+      7.C-decorative-background-image
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <h3>Identify Content</h3>
+        <p>Use the <strong class="text-uppercase">ANDI</strong>: graphics/images module to find CSS background images. If the “find background” and “hide background” buttons are available, background images are on the page.</p>
+
+        <p>If there is no such content, the result for the following test ID(s) is <strong class="trext-uppercase">DOES NOTAPPLY: 7.C.</strong></p>
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">1.1.1-decorative-background-image</th>
+              <td>7.C</td>
+              <td>The background image is not the only means used to convey important information.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if there are no background images
+        on the page.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Select the “find background” button in ANDI: graphics/images to outline all
+          background images (in green)</li>
+          <li>Find the outlined background images within the page. (ANDI will not display
+          information for background images.)</li>
+          <li>Determine whether important information provided by the background image is
+          available without the background image.
+            <ul>
+              <li>ISelect the “hide background” function in ANDI: graphics/images to hide background images and help determine if the image’s information is also available on the page without the background image.</li>
+              <li>Review the sequence or positioning of the image to determine whether equivalent information is presented in the same logical order.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong class="text-uppercase">TRUE</strong>, then the content <strong class="text-uppercase">PASSES</strong>:</p>
+        <ul>
+          <li>The background image is decorative, OR</li>
+          <li>The meaning of the background image is also available without the background image.</li>
+        </ul>
+
+        <h4>Note:</h4>
+        <p>Any changes to meaningful background images that occur automatically or as a result of interaction with the page should be included in this test.</p>
+      </div>
+    </div>
+  </div>
+  <!-- CCAPTCHA Images -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      7.D-captcha-alternative
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h3>Identify Content</h3>
+        <p>Identify all CAPTCHA images.</p>
+
+        <p>If there is no such content, the result for the following test ID(s) is <strong class="text-uppercase">DOES NOT APPLY: 7.D.</strong></strong></p>
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">1.1.1-captcha-alternative</th>
+              <td>7.D</td>
+              <td>Alternative forms of CAPTCHA are provided.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if there are no CAPTCHA images on the page.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Determine whether alternative forms of CAPTCHA with output modes for different types of sensory perception are provided.</li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If ALL of the following is <strong class="text-uppercase">TRUE</strong>, then the content <strong class="text-uppercase">PASSES</strong>:</p>
+        <ul>
+          <li>The CAPTCHA has a format for users without vision, AND</li>
+          <li>The CAPTCHA has a format for users without hearing.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--Images of Text-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      7.E-1-image-of-text
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <h3>Identify Content</h3>
+        <p>Identify all CAPTCHA images.</p>
+
+        <p>If there is no such content, the result for the following test ID(s) is <strong class="text-uppercase">DOES NOT APPLY: 7.D.</strong></strong></p>
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">1.4.5-image-of-text</th>
+              <td>7.E</td>
+              <td>The image of text cannot be replaced by text or is customizable.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if there are no images of text on the page.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Determine if text can be used instead of the image of text to present the same effect and information.
+            <ol type="a">
+              <li>Logotypes (text that is part of a logo or brand name) cannot be replaced by text.</li>
+              <li>Type samples, branding, images of specific fonts that are not widely supported are additional examples of images of text that
+              cannot be replaced by text.</li>
+            </ol>
+          </li>
+          <li>Determine if the image of text can be visually customized: adjust the font, size, color and background with controls provided by
+          the web page.
+            <ol type="a">
+              <li>Customizing font size for an image of text also implies the ability to adjust the size without pixelation (which is typically
+              evident when simply using the browser resize functionality to resize images).</li>
+            </ol>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If ANY of the following is <strong class="text-uppercase">TRUE</strong>, then the content <strong class="text-uppercase">PASSES</strong>:</p>
+        <ul>
+          <li>The image of text cannot be replaced with text, OR</li>
+          <li>The image of text can be visually customized.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Applicable Standards -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        Applicable Standards
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th width= "75%">Section 508/WCAG Success Criteria</th>
+              <th width= "25%">Baseline Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>WCAG SC: 1.1.1. Non-Text: All non-text content that is presented to the user has a text alternative that serves the equivalent
+              purpose, except for [specific] situations listed.
+              <br />
+              WCAG SC: 1.4.5 Images of Text: If the technologies being used can achieve the visual presentation, text is used to convey
+              information rather than images of text except for [specific situation listed].
+              </td>
+              <td>6. Images</td>
+            </tr>
+            <tr>
+              <td>WCAG SC: 1.1.1. Non-Text: All non-text content that is presented to the user has a text alternative that serves the equivalent
+              purpose, except for [specific] situations listed</td>
+              <td>18. CSS Content and Positioning</td>
+            </tr>
+            <tr>
+              <td>WCAG SC 4.1.2 Name, Role, Value: For all user interface components (including but not limited to: form elements, links and
+              components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can
+              be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including
+              assistive technologies.</td>
+              <td>5. Changing Content</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Next button -->
 <div class="d-flex align-items-center">
   <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/8-Adjustable-Time-Limits.html"
   class="btn btn-md btn-success">8. Adjustable Time Limits</a></div>

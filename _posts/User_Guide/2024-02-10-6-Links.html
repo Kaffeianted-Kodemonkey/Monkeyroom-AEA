@@ -7,40 +7,181 @@ permalink: /user_guide/6-Links.html
 is_series: true
 series_title: User Guide
 ---
+
 <div class="accordion mb-5" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
+        6.A-link-purpose
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <h3>Identify Content</h3>
+        <p>Use <strong>ANDI</strong>: links/buttons to identify all links.</p>
+        <p>If there is no such content, the result for the following test <strong>ID(s)</strong> is <strong>DOES NOT APPLY</strong>: 6.A and 6.B.</p>
+
+
+        <p><strong>EXCLUDE</strong> disabled input elements. These do not receive keyboard focus, cannot be selected and cannot be modified. If there is no such content, the result for the following test <strong>ID(s)</strong> is <strong>DOES NOT APPLY:</strong> 5.A to 5.H.</p>
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">2.4.4-link-purpose</th>
+              <td>6.A</td>
+              <td>The purpose of each link can be determined from any combination of the link text, accessible name, accessible description,
+              and/or programmatically determined link context.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if the page does not have links.</p>
+
+        <h3>Note:</h3>
+        <p>This test does not apply to links that function as an anchor or target and are not perceivable or selectable by users.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Evaluate the ANDI Output for link purpose.</li>
+          <li>Determine whether the ANDI Output, in combination with the programmatically determined link context (text that is in the same sentence,
+          paragraph, list item, or table cell as the link or in a table header cell that is associated with the table cell that contains the link)
+          adequately describes the link’s purpose or function.
+            <ul>
+              <li>In cases where the purpose of the link is intentionally vague or ambiguous (e.g., the content to be revealed after selecting a link to
+              “Door 1,” “Door 2,” or “Door 3” is intended to be a surprise), it may be sufficient for the combination of link text, accessible name,
+              accessible description, and/or link context to refer to the link purpose vaguely or ambiguously.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong class="text-uppercase">TRUE</strong>, then the content <strong class="text-uppercase">PASSES</strong>:</p>
+        <ul>
+          <li>The combination of the programmatically determined link context and the <strong class="text-uppercase">ANDI</strong> Output provide
+          adequate description of the link’s purpose.</li>
+        </ul>
+
+        <h4>Note:</h4>
+        <p>Any changes to links that occur automatically or as a result of interaction with the page should be included in this test.</p>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
+        6.B-change-notify-links
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">4.1.2-change-notify-links</th>
+              <td>6.B</td>
+              <td>The page provides notification of each change in content that is the result of interaction with a link.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong class="text-uppercase">DOES NOT APPLY (DNA)</strong> if the page does not have links or if the page
+        content does not change due to link interaction.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Activate the link to trigger changes to page content (e.g., content removed, content is added, etc.).</li>
+          <li>Identify how the user is notified of the change in content.
+            <ol type="a">
+              <li>Determine whether the link or button that triggers the change has an accessible name, accessible description and/or context that provides sufficient description of the interface component’s purpose.
+                <ol type="i">
+                  <li>If content changes are the direct result of a user's action while interacting with content AND the interface component that triggers the change provides sufficient description of the change, then no additional programmatic event notification is necessary.</li>
+                </ol>
+              </li>
+              <li>Identify any dialogs that alert the user to changes in content.
+                <ol type="i">
+                  <li>Determine whether the dialogs provide sufficient programmatic notification of content changes.</li>
+                </ol>
+              </li>
+              <li>Identify content changes that result in focus moving to the content that has changed.
+                <ol type="i">
+                  <li>Determine whether moving the focus to the content that has changed is sufficient to notify the user of the change event (e.g., by describing the change directly in the content to which the focus moved).</li>
+                </ol>
+              </li>
+              <li>Identify content changes occurring in an ARIA live region:
+                <ol type="i">
+                  <li>Launch ANDI: structures</li>
+                  <li>Click the “live regions” link, then use the mouse to hover over any identified live region (alternatively, use ANDI’s previous/next element buttons to navigate to identified live regions). </li>
+                  <li>Determine whether the changing content is contained within the live region.</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If any of the following is <strong class="text-uppercase">TRUE</strong>, then the Test Condition is <strong class="text-uppercase">TRUE</strong>
+        and the content <strong class="text-upper">PASSES:</strong></p>
+
+        <ul>
+          <li>The user’s action directly results in the change in content, AND the interface component that triggered the change provided sufficient description about the change event, OR</li>
+          <li>The page notifies the user about a change via a keyboard-accessible dialog,OR</li>
+          <li>The page moves focus to the content that has changed, AND the content that has changed provides sufficient description about the change, OR</li>
+          <li>The content that has changed is contained in an ARIA live region.</li>
+        </ul>
+
+        <h4>Note:</h4>
+        <p>Any changes to links that occur automatically or as a result of interaction with the page should be included in this test.</p>
       </div>
     </div>
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+        Applicable Standards
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th width= "75%">Section 508/WCAG Success Criteria</th>
+              <th width= "25%">Baseline Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html" target="_blank">WCAG SC 2.4.4 Link Purpose (In Context)</a>:
+              The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined
+              link context, except where the purpose of the link would be ambiguous to users in general.</td>
+              <td><a href="https://ictbaseline.access-board.gov/14Links/" target="_blank">14. Links</a></td>
+            </tr>
+            <tr>
+              <td><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html" target="_blank">WCAG SC 4.1.2 Name, Role, Value:</a>
+              For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name
+              and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and
+              notification of changes to these items is available to user agents, including assistive technologies.</td>
+              <td><a href="https://ictbaseline.access-board.gov/05Controls/" target="_blank">5. Changing Content</a></td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

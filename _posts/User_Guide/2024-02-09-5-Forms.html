@@ -7,49 +7,513 @@ permalink: /user_guide/5-Forms.html
 is_series: true
 series_title: User Guide
 ---
+
 <div class="accordion mb-5" id="accordionExample">
-  <!-- #1 -->
+  <!-- #5.A  label-provided -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
+    <h2 class="accordion-header" id="headingOne">
       <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-        Accordion Item #1
+        <strong>5.A - label-provided</strong>
       </button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <h3>Identify Content</h3>
+        <ol>
+          <li>Use <strong>ANDI:</strong> focusable elements to identify any form elements on the page, e.g., buttons, text fields, radio buttons, checkboxes, read-only fields, and multi-select lists.</li>
+          <li>Find all instructions and cues (textual and graphical) that are related to form components/controls, e.g., groupings, order of completion, special conditions, qualifiers, format instructions.</li>
+        </ol>
+
+        <p><strong>EXCLUDE</strong> disabled input elements. These do not receive keyboard focus, cannot be selected and cannot be modified. If there is no such content, the result for the following test <strong>ID(s)</strong> is <strong>DOES NOT APPLY:</strong> 5.A to 5.H.</p>
+
+
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">3.3.2-label-provided</th>
+              <td>5.A</td>
+              <td>Visual labels or instructions are provided for form elements.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if the page does not have form elements or all form elements are disabled.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Determine if each form element provides visual labels or instructions.</li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If the following is <strong>TRUE</strong>, then the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>Visual labels or instructions are provided for each form element.</li>
+        </ol>
+
+        <h4>Note:</h4>
+        <ul>
+          <li>The label or instruction must be visible when the form field has focus.</li>
+          <li>The label or instruction can be graphical or textual.</li>
+          <li>This test only determines whether visual labels or instructions are provided, regardless of accuracy. The form label is tested for a sufficient description in 5.B (2.4.6-label-descriptive).</li>
+          <li>The programmatic association of the form instructions (text label) to the form field is tested in 5.C for 1.3.1-programmatic-label.</li>
+        </ul>
       </div>
     </div>
   </div>
-  <!-- #2 -->
+  <!-- #5.B label-descriptive -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
+    <h2 class="accordion-header" id="headingTwo">
+      <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <strong>5.B - label-descriptive</strong>
       </button>
     </h2>
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">2.4.6-label-descriptive</th>
+              <td>5.B</td>
+              <td>Each visual form label is sufficiently descriptive.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if the page does not have form elements, if all form elements are disabled, or if no visual labels are provided for form elements.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Review the visual labels and/or instructions provided for each form component/control.</li>
+          <li>Determine whether labels and/or instructions for form components sufficiently describe the purpose and applicable data requirements (date formats, required fields, data type, etc.).</li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If both of the following are <strong>TRUE</strong>, then the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>Each visual form label is sufficiently clear and descriptive, so users know what input data is expected,</li>
+          <li>Each visual button label is sufficiently clear and descriptive, so users know its function.</li>
+        </ol>
+
+        <h4>Note:</h4>
+        <ul>
+          <li>An error message is not sufficient to communicate the expected format to pass this test.</li>
+          <li>The label or instruction can be graphical or textual.</li>
+          <li>Any changes to form labels that occur automatically or as a result of interaction with the page should be included in this test.</li>
+        </ul>
       </div>
     </div>
   </div>
-  <!-- #3 -->
+  <!-- #5.C programmatic-label -->
   <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+    <h2 class="accordion-header" id="headingThree">
+      <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+        <strong>5.C - programmatic-label</strong>
       </button>
     </h2>
     <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">1.3.1-programmatic-label</th>
+              <td>5.C</td>
+              <td>The combination of the accessible name, accessible description, and other programmatic associations (e.g., table column and/or row associations) describes each input field and includes all relevant instructions and cues (textual and graphical)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA) </strong>if the page does not have form elements.</p>
+
+        <h4>How to Test:</h4>
+        <ol>
+          <li>Launch <strong>ANDI</strong>: focusable elements (this is the default selection).</li>
+          <li>Use the mouse or <strong>ANDI’s</strong> next/previous element buttons to highlight each focusable form element and review the <strong>ANDI</strong> output.</li>
+          <li>Review the ANDI Output for each focusable form field.</li>
+          <li>If the <strong>ANDI</strong> Output does not adequately define the form element, review other programmatic associations, such as table headings or location in a hierarchical list structure, to determine whether they provide or contribute to the form component’s description, cues, or instructions.
+            <ul>
+              <li>In cases where the purpose of the form element is intentionally vague or ambiguous (e.g., the content to be revealed after selecting a link to “Door 1,” “Door 2,” or “Door 3” is intended to be a surprise), it may be sufficient for the combination of form element text, accessible name, accessible description, and/or form element context to refer to its purpose vaguely or ambiguously</li>
+            </ul>
+          </li>
+        </ol>
+
+        <h4>Evaluate Results:</h4>
+        <p>If any of the following is <strong>TRUE</strong>, then the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>The <strong>ANDI</strong> Output includes all relevant instructions and cues for the form element, including when fields are required, <strong>OR</strong></li>
+          <li>Descriptive labels and cues are provided by other programmatic associations (e.g., table column and/or row associations), <strong>OR</strong></li>
+          <li>A combination of ANDI Output AND other programmatic association includes all relevant instructions and cues, <strong>OR</strong></li>
+          <li>The combination of the programmatically determined form element context and the <strong>ANDI</strong> Output provide adequate description of its purpose.</li>
+        </ol>
+
+        <h4>Note:</h4>
+        <ul>
+          <li>This test also covers the requirement for WCAG SC 4.1.2 Name, Role, Value.</li>
+          <li>Any changes to form elements that occur automatically or as a result of interaction with the page should be included in this test.</li>
+          <li>To evaluate labels and cues provided by other programmatic associations, it may be necessary to perform other tests, including but not limited to 14. Tables and 10. Content Structure.</li>
+          <li>At minimum, radio buttons and checkboxes should be programmatically associated with their question and response.</li>
+          <li>Form fields are not required to have programmatic associations with form section headings unless there is significant risk of confusion.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- #5.D on-focus-->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFour">
+      <button class="accordion-button fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+        <strong>5.D - on-focus</strong>
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">3.2.2-on-input</th>
+              <td>5.D</td>
+              <td>Changing field values/selections (e.g., entering data in a text field, changing a radio button selection) does NOT initiate an unexpected change of context.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Applicability:</h3>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if the page does not have form elements.</p>
+
+        <h3>How to Test:</h3>
+        <ol>
+          <li>Use the keyboard to navigate to form elements, e.g., text fields, radio buttons, checkboxes, buttons.</li>
+          <li>Complete the form element, e.g., select the radio button or check box, type information into the text box, select an item from the drop down.</li>
+          <li>Exit (tab away from) the completed form element and determine whether there are any instances of an unexpected change of context.</li>
+          <li>Changes in context include changes of: user agent, viewport, focus, content that changes the meaning of the page, e.g., a form automatically submitted when exiting a field, a new window launched when a radio button is selected.
+            <ol type="a">
+              <li>Note: A change is not considered unexpected if:
+                <ol type="i">
+                  <li>The user is notified that a change of context is about to occur.</li>
+                  <li>The control is clearly intended to initiate a change in context when activated.</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <h3>Evaluate Results:</h3>
+        <p>If the following is <strong>TRUE</strong>, then the Test Condition is <strong>TRUE</strong> and the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>Changing the value of a form element does not initiate an unexpected context change.</li>
+        </ol>
+
+        <h3>Note:</h3>
+        <ul>
+          <li>For some types of form fields, such as text input fields, it may be necessary to move focus away from the field to trigger an input event.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- #5.E  -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingFive">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+        <strong>5.E - change-notify-form</strong>
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">4.1.2-change-notify-form</th>
+              <td>5.E</td>
+              <td>The page provides notification of each form-related change in content.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Applicability:</h3>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if the page does not have form elements or if the page content does not change due to form interaction.</p>
+
+        <h3>How to Test:</h3>
+        <ol>
+          <li>Continue from Test 5.D.</li>
+          <li>If necessary, repeat the interactions that trigger changes to content of the page (instructions changed, error notification, content removed, content is added, button name, etc.).</li>
+          <li>Identify how the user is notified of the change in content.
+            <ol type="a">
+              <li>Determine whether the form element that triggers the change has an accessible name, accessible description and/or context that provides sufficient description of the interface component’s purpose.
+                <ol type="i">
+                  <li>If content changes are the direct result of a user's action while interacting with content AND the interface component that triggers the change provides sufficient description of the change, then no additional programmatic event notification is necessary.</li>
+                </ol>
+              </li>
+              <li>Identify any dialogs that alert the user to changes in content.
+                <ol type="i">
+                  <li>Determine whether the dialogs provide sufficient programmatic notification of content changes.</li>
+                </ol>
+              </li>
+              <li>Identify content changes that result in focus moving to the content that has changed.
+                <ol type="i">
+                  <li>Determine whether moving the focus to the content that has changed is sufficient to notify the user of the change event (e.g., by describing the change directly in the content to which the focus moved).</li>
+                </ol>
+              </li>
+              <li>Identify content changes occurring in an ARIA Live Region:
+                <ol type="i">
+                  <li>Launch ANDI: structures</li>
+                  <li>Click the “live regions” link, then use the mouse to hover over any identified live region (alternatively, use ANDI’s previous/next element buttons to navigate to identified Live Regions).</li>
+                  <li>Determine whether the changing content is contained within the Live Region.</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+        </ol>
+
+        <h3>Evaluate Results:</h3>
+        <p>If any of the following is <strong>TRUE</strong>, then the Test Condition is <strong>TRUE</strong> and the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>The user’s action directly results in the change in content, AND the interface component that triggered the change provided sufficient description about the change event</li>
+          <li>The page notifies the user about a change via a keyboard-accessible dialog</li>
+          <li>The page moves focus to the content that has changed, AND the content that has changed provides sufficient description about the change</li>
+          <li>The content that has changed is contained in an ARIA Live Region.</li>
+        </ol>
+
+        <h3>Note:</h3>
+        <ol>
+          <li>All form elements that changed during this test are to be tested per Test ID 5.C.</li>
+          <li>It may be necessary to use the mouse to determine whether state changes occur on hover or on click.</li>
+          <li>Depending on the component, a change of state may be triggered by various actions, such as changing values or states of other components, toggling a function, entering data in the component, mouseover, etc.</li>
+          <li>This list of techniques to meet SC 4.1.2 is not all-inclusive; there may be emerging techniques not explicitly spelled out that are acceptable.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- #5.F - error-identification-->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSix">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+        <strong>5.F - error-identification</strong>
+      </button>
+    </h2>
+    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">identification</th>
+              <td>5.F</td>
+              <td>The item in error is identified in text and sufficiently described to the user in text.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Applicability:</h3>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if the form element does not have automatic error detection.</p>
+
+        <h3>How to Test:</h3>
+        <ol>
+          <li>Intentionally violate formatting and other form instructions, e.g., leave a required form field empty, use a different date format than is required, and/or create a password that does not meet the password strength requirements.</li>
+          <li>Attempt to submit the form and/or move to the next page.</li>
+          <li>Determine whether the error is identified and described in text.
+            <ol type="a">
+              <li>The form field with the error is identified in text, e.g., “Error: Password field.”</li>
+              <li>Text describes the error, e.g., in a dialog message that states, “the Password you entered is incorrect.”</li>
+            </ol>
+          </li>
+        </ol>
+
+        <h3>Evaluate Results:</h3>
+        <p>If the following is <strong>TRUE</strong>, then the Test Condition is <strong>TRUE</strong> and the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>The item that is in error is identified in text and sufficiently described to the user in text.</li>
+        </ol>
+
+        <h3>Note:</h3>
+        <ul>
+          <li>The error message may be tested as part of 4.1.2-change-notify-forms (Test ID 5.E).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- #5.G error-suggestion -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingSeven">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+        <strong>5.G - error-suggestion</strong>
+      </button>
+    </h2>
+    <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">3.3.3-error-suggestion</th>
+              <td>5.G</td>
+              <td>Guidance (e.g., suggestion for corrected input) is provided about how to correct errors for form fields.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Applicability:</h3>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if any of the following conditions apply to the form element:</p>
+        <ul>
+          <li>There is no automatic input error detection.</li>
+          <li>Based on the type of input required, suggestions for correction cannot be provided because they are not knowable.</li>
+          <li>Providing information about how to correct the error would jeopardize the security or purpose of the content, e.g., details about an incorrect password.</li>
+        </ul>
+
+        <h3>How to Test:</h3>
+        <ol>
+          <li>Continue from Test 5.F.</li>
+          <li>Determine whether guidance provides sufficient details for how to correct the error and/or offers suggestions of corrected input.</li>
+        </ol>
+
+        <h3>Evaluate Results:</h3>
+        <p>If ANY of the following are <strong>TRUE</strong>, then the Test Condition is <strong>TRUE</strong> and the content <strong>PASSES</strong>:</p>
+
+        <ol>
+          <li>Suggestions for corrected input are provided</li>
+          <li>The description contains adequate information for the user to know what is required to fix the error</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <!-- #5.H error-prevention -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingEight">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+        <strong>5.H - error-prevention</strong>
+      </button>
+    </h2>
+    <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "25%">Test Name</th>
+              <th scope="col" width= "25%">Test ID</th>
+              <th scope="col" width= "25%">Test Condition</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="col" width= "25%">3.3.4-error-prevention</th>
+              <td>5.H</td>
+              <td>The web page allows the user to check, reverse, and/or confirm submission.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h4>Applicability:</h4>
+        <p>This Test Condition <strong>DOES NOT APPLY (DNA)</strong> if the form is only on one page OR does not do any of the following upon submission:</p>
+        <ul>
+          <li>Cause legal or financial obligations.</li>
+          <li>Modify or delete user-controlled data in data storage systems.</li>
+          <li>Submit test responses.</li>
+        </ul>
+
+        <h4>How to Test:</h4>
+        <p>Complete the required form fields with intentional errors and submit the content.</p>
+
+        <h4>Evaluate Results:</h4>
+        <p>If any of the following is <strong>TRUE</strong>, the content <strong>PASSES</strong>:</p>
+        <ol>
+          <li>The user can reverse the submission</li>
+          <li>The user is presented with an option to review, confirm, and correct information before finalizing the submission</li>
+          <li>The page checks data for input errors and allows the user an opportunity to correct any errors.</li>
+        </ol>
+
+        <h4>Note:</h4>
+        <ul>
+          <li>Because the user can review a one-page form before pressing the submit button on the page, another review mechanism is not required.</li>
+          <li>Understanding 3.3.4 explains “user-controlled data” as follows: “such as their entire travel profile in a travel services web site. When referring to modification or deletion of 'user controllable' data, the intent is to prevent mass loss of data such as deleting a file or record. It is not the intent to require a confirmation for each save command or the simple creation or editing of documents, records, or other data.”</li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- Applicable Standards -->
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="headingNine">
+      <button class="accordion-button collapsed fs-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+        <strong>Applicable Standards</strong>
+      </button>
+    </h2>
+    <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <table class="table border">
+          <thead>
+            <tr class="table-primary">
+              <th scope="col" width= "75%">Section 508/WCAG Success Criteria</th>
+              <th scope="col" width= "25%">Baseline Requirements</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html" target="_blank">WCAG SC: 1.1.1. Non-Text:</a> All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for [specific] situations listed.</p>
+                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/headings-and-labels.html" target="_blank">WCAG SC 2.4.6 Headings and Labels:</a> Headings and labels describe topic or purpose.</p>
+                <p><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-unpredictable-change.html" target="_blank">WCAG SC 3.2.2 On Input:</a> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.</p>
+                <p><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html" target="_blank">WCAG SC 3.3.1 Error Identification:</a> If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text. </p>
+                <p><a href="https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html" target="_blank">WCAG SC 3.3.2 Labels or Instructions:</a> Labels or instructions are provided when content requires user input.</p>
+                <p><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html" target="_blank">WCAG SC 3.3.3 Error Suggestion:</a> If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
+              </td>
+              <td><a href="https://section508coordinators.github.io/ICTTestingBaseline/10Forms.html" target=_blank">10. Forms</a></td>
+            </tr>
+
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </div>
 
 <div class="d-flex align-items-center">
-  <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/6-Links.html"
-  class="btn btn-md btn-success">6. Links</a></div>
+  <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/6-Links.html" class="btn btn-md btn-success">6. Links</a></div>
 </div>

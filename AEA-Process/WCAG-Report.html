@@ -297,8 +297,9 @@
 
             <div class="content">
               <label for="dsblImpctRslt"> </label>  <!-- <h4>Different impacted groups are separated by comma, check below</h4> -->
-              <span> {{impctInfoMsg}}</span>
-              <span id="dsblImpctRslt">
+
+              <p>{{impctInfoMsg}}</p>
+              <div id="dsblImpctRslt">
                 <table id='impctScreTbl' class="table" >
                   <caption> <strong>Score Breakdown </strong></caption>
                   <tr>
@@ -338,10 +339,10 @@
                   </tr>
                 </table>
 
-                <p>Refer to the <a title="WCAG 2.0 Impact Statements" ng-href="/assets/Resources/WCAG 2.0 Impact Statements_2018-10-02.pdf">WCAG 2.0 Impact Statements</a> for more information.</p>
+                <p>Refer to the <a title="WCAG Impact Statements" ng-href="/assets/Resources/WCAG_Impact_Statements.pdf">WCAG Impact Statements</a> for more information.</p>
 
                 <p>Refer to the <a title="Disability Mapping" ng-href="/assets/Resources/TT5-ID-FPC_Mapping_07-15-20.xlsx">Disability Mapping</a>  for more information about Test IDs.</p>
-              </span>	<!-- {{DisabilityImpactCollectionSC}}-->
+              </div>	<!-- {{DisabilityImpactCollectionSC}}-->
 
               <!-- commented out because we dont want to display duplicate groups based on failed test conditions
               <div id="myImpact" ng-repeat="record in jsonData">

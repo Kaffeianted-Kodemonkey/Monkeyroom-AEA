@@ -9,11 +9,22 @@ series_title: User Guide
 ---
 <p>At Kaffeinated Kodemonkey, we are committed to ensuring that all our projects meet or exceed accessibility standards.
 To achieve this, we have adopted the <strong>DHS Trusted Tester</strong> process as our primary testing methodology,
-and we base our approach on the User Guide for Accessibility Evaluation Audit (AEA) Reports provided by the <strong>DHS</strong></p>
+and we base our approach on the WCAG 2.X by the W3C. This process serves as our baseline for ensuring accessibility
+compliance across all our projects. </p>
 
-<p>This process serves as our baseline for ensuring accessibility compliance across all our projects. To conduct a manual
-test on your project, please refer to the steps outlined in the DHS Trusted Tester User Guide. We have integrated this process
-into our workflow to ensure consistent and thorough testing for accessibility compliance.</p>
+<p>In conducting a manual test on your project, please refer to the steps outlined in This Guide as we have integrated the DHS Trusted Tested
+process into our workflow to ensure consistent and thorough testing for accessibility compliance.</p>
+
+<h2>Testing Process</h2>
+<p>All products shoud be thoroughlly vetted by a Sr. A11y Dev or Company Owner. This vetting will determine if a product should be auto scanned
+via PopeTech or MonkeyScann. <!-- (MonkeyScann - inhouse site scan via WAVE-API custom app.) --></p>
+<ul>
+  <li><strong>PopeTech:</strong> For large websites and apps or require login</li>
+  <li><strong>MonkeyScann:</strong> For small websites and apps that do not require login</li>
+</ul>
+
+<p>Once auto scan is complete you can start the manual testing progress and record results in the AEA-Report. During this process
+you are to test using current versions of website, app, software, tools, devisec, browsers, screenreaders. Inclusding testing requests by client.</p>
 
 <h2>Testing Order</h2>
 <p>The numbering of the tests within the test process do not necessarily indicate the order in which tests must be performed. Each tester and each
@@ -42,6 +53,6 @@ rationale provided in <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/" targ
 implementing Web Content Accessibility Guidelines 2.0</a>. The test process also relies on accompanying Trusted Tester training to provide additional description and guidance for understanding the logic that drives each test. Each step included in this test process document includes only the information necessary to execute the test. However, the Applicable Standards section of each test references the applicable WCAG 2.0 or Section 508 standard along with a link to the applicable article from the Understanding WCAG 2.0 document.</p>
 
 <div class="d-flex align-items-center">
-  <div class="ms-auto" aria-hidden="true"><a href="{{ site.url }}/user_guide/Test-Environment.html"
+  <div class="ms-auto" aria-hidden="true"><a href="/user_guide/Test-Environment.html"
   class="btn btn-md btn-success">Test Environment</a></div>
 </div>

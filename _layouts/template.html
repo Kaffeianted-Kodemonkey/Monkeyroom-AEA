@@ -4,11 +4,48 @@
   {% include head.html %}
 
   <body class="d-flex flex-column h-100">
+    <!--<a href="#helpID" id="skipID" class="skip" autofocus >Skip to Main Content </a>-->
     {% include header.html %}
 
-      <div class="container-fluid ps-5 mt-2 pt-5">
+    <div class="container-fluid">
+      <div class="row mx-3 my-3">
+        {% if page.category == 'empty'} %}
+        <div class="col-3">
+          <hr />
+          <h2 class="text-success">Resources</h2>
+          <hr />
 
-        {{ content }}
+          <h3 class="fs-5">Tools & Testing</h3>
+          <ul>
+            <li><a href="/How-To-Test-Parsing.html">Test Parsing</a></li>
+          </ul>
+
+          <h3 class="fs-5">AEA Downloads</h3>
+          <ul>
+            <li><a href="/assets/Resources/SuccessCriteriaTT4.json" download>SuccessCriteriaTT4.json <i class="bi bi-arrow-down"></i></a></li>
+            <li><a href="/assets/Resources/SuccessCriteriaTT5.1.1.json" download>Trusted Tester v.5.1.1 <i class="bi bi-arrow-down"></i></a></li>
+            <li><a href="/assets/Resources/WCAG_Impact_Statements.pdf" download>WCAG Impact Statements <i class="bi bi-arrow-down"></i></a></li>
+            <li><a href="/assets/Resources/TT5-ID-FPC_Mapping_07-15-20.xlsx" download>TT5-ID-FPC_Mapping_07-15-20.xlsx <i class="bi bi-arrow-down"></i></a></li>
+          </ul>
+
+          <h3 class="fs-5">AEA Documents</h3>
+          <ul>
+            <li><a href="/assets/Resources/#" download>Contract<i class="bi bi-arrow-down"></i></a></li>
+            <li><a href="/assets/Resources/POC-Certificate-Template.doc" download>POCC Overview <i class="bi bi-arrow-down"></i></a></li>
+            <li><a href="/AEA-Process/WCAG-Report.html" target="_blank">WCAG Report</a></li>
+            <li><a href="https://www.w3.org/WAI/planning/statements/generator/#create" target="_blank">A11y Statment Generator</a></li>
+            <li><a href="/assets/Resources/SIPA-Authorization-Form.pdf" download>SIPA Authorization Form <i class="bi bi-arrow-down"></i></a></li>
+            <!--<li><a href="#">Something else here</a></li>-->
+          </ul>
+        </div>
+
+        <div class="col-9 pt-4">
+        {% else %}
+        <div class="col-10 pt-4">
+        {% endif %}
+          {{ content }}
+        </div>
+      </div>
     </div>
 
     <br><br>
