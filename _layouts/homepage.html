@@ -3,18 +3,26 @@
 
   {% include head.html %}
 
-  <body class="d-flex flex-column h-100">
-
-    {% include header.html %}
-
-    <div class="container-fluid p-5">
-
-      {% include welcome.html %}
+  <body class="d-flex flex-column">
+    <div class="container-fluid text-left">
+      <div class="row">
+        {% include header.html %}
+        <div class="col-2 vh-auto bg-secondary-subtle p-3">
+          {% include left-nav.html %}
+        </div>
+        <div class="col p-5">
+          
+          
+          {% include welcome.html %}
+          
+          
+        </div>
+        {% include footer.html %}
+      </div>
     </div>
-
-    {% include footer.html %}
-
     <script src="/assets/JS/common.js"></script>
 
   </body>
 </html>
+
+
